@@ -1,14 +1,14 @@
 const scrollOutside = (node: HTMLElement) => {
-	const handleClick = (event) => {
+	const handleScroll = (event) => {
 		if (node && !node.contains(event.target) && !event.defaultPrevented)
-			node.dispatchEvent(new CustomEvent('click-outside'));
+			node.dispatchEvent(new CustomEvent('scroll-outside'));
 	};
 
-	document.addEventListener('scroll', handleClick, true);
+	document.addEventListener('scroll', handleScroll);
 
 	return {
 		destroy() {
-			document.removeEventListener('scroll', handleClick, true);
+			document.removeEventListener('scroll', handleScroll);
 		}
 	};
 };

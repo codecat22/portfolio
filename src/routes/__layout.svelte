@@ -6,11 +6,6 @@
 	});
 </script>
 
-<script lang="ts">
-	import PageTransition from '../components/PageTransition.svelte';
-	export let key;
-</script>
-
 <svelte:head>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -23,6 +18,4 @@
 	<title>Catfolio</title>
 </svelte:head>
 
-<PageTransition refresh={key}>
-	<slot />
-</PageTransition>
+<slot />

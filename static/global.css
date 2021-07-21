@@ -143,6 +143,7 @@ table {
     --gray: #7D8491;
     --light-gray: #BDC0C7;
     --purple: #3F334D;
+    --pink: #DB5461;
     --mobile-width: 768px;
 }
 
@@ -215,4 +216,8 @@ p {
     overflow: auto;
     grid-column: 2;
     grid-row: 3;
+}
+
+#svelte {
+    overflow: hidden;
 }

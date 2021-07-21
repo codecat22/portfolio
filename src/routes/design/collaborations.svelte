@@ -1,14 +1,15 @@
 <script lang="ts">
 	import data from '../../data/collaborations';
+	import Sidebar from '../../components/Sidebar.svelte';
 
 	const chunk = (arr: any[], columnCount: number): any[][] =>
-	Array.from({ length: columnCount }, (_v, arrayIndex) => {
-		return arr.filter((_it, itemIndex) => itemIndex % columnCount === arrayIndex);
-	});
-	
+		Array.from({ length: columnCount }, (_v, arrayIndex) => {
+			return arr.filter((_it, itemIndex) => itemIndex % columnCount === arrayIndex);
+		});
+
 	let columns = chunk(data.cards, 3);
 	let clientWidth = Infinity;
-	
+
 	$: columns = chunk(data.cards, clientWidth >= 1200 ? 3 : clientWidth >= 768 ? 2 : 1);
 </script>
 
@@ -39,6 +40,14 @@
 	</div>
 </section>
 
+<Sidebar
+	links={[
+		{ label: 'Web Design', href: '/design' },
+		{ label: 'Visual Art', href: '/design/art' },
+		{ label: 'Other Projects', href: '/design/other' }
+	]}
+/>
+
 <style>
 	.masonry {
 		display: flex;
@@ -55,6 +64,8 @@
 		border: 1px solid rgba(10, 10, 10, 0.3);
 		border-top: 5px solid var(--black);
 		margin: 0.5rem;
+		margin-top: 0;
+		margin-bottom: 1rem;
 		display: flex;
 		flex-direction: column;
 		height: min-content;

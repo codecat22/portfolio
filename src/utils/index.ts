@@ -4,3 +4,7 @@ export function deviceIsMobile(): boolean {
 	}
 	return false;
 }
+
+export function unique(): string {
+	return (Date.now().toString(36) + Math.random().toString(36).substr(2, 5)).toUpperCase();
+}

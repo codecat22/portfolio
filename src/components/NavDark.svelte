@@ -1,11 +1,14 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
+	import { page } from '$app/stores';
 
 	import HomeButton from '../components/HomeIconDark.svelte';
 	import WritingButton from '../components/WritingIconDark.svelte';
 	import ContactButton from '../components/ContactIconDark.svelte';
+	import BurgerIcon from '../components/BurgerIcon.svelte';
+	import ReturnArrow from '../components/ReturnArrow.svelte';
 
-	export let isMobile;
+	$: isArtPage = $page.path.includes('/design/art/');
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -13,23 +16,42 @@
 <nav class={$$props.class}>
 	<a href="/"><HomeButton /></a>
 	<a href="/writing"><WritingButton /></a>
-	<a href="/contact" class="pre-last"><ContactButton /></a>
-	<!-- svelte-ignore a11y-invalid-attribute -->
-	<button class="menu" class:hidden={!isMobile} on:click={() => dispatch('menu-click')}>
-		&#10247;
-	</button>
+	<a href="/design/art" class:hidden={!isArtPage}><ReturnArrow class="return-arrow" /></a>
+	<a href="/contact" class="right-item"><ContactButton /></a>
+	<div class="menu" on:click={() => dispatch('menu-click')}>
+		<BurgerIcon class="burger-icon" />
+	</div>
 </nav>
 
 <style>
+	.hidden {
+		display: none;
+	}
+
+	:global(.return-arrow) {
+		transform: scaleX(-1);
+	}
+
+	:global(.burger-icon:hover) {
+		color: var(--white) !important;
+		transition: all 0.3s linear;
+	}
+
+	.right-item {
+		margin-left: auto;
+	}
+
+	a {
+		display: grid;
+		place-content: center;
+		margin-right: 1rem;
+	}
+
 	nav {
 		display: flex;
 		align-items: center;
-		padding: 0.8rem;
+		padding: 0.8rem 1rem 0.8rem 1rem;
 		background-color: inherit;
-	}
-
-	nav > :global(*) {
-		margin-right: 1rem;
 	}
 
 	.pre-last {
@@ -41,31 +63,17 @@
 		color: var(--light-gray);
 		text-decoration: none;
 		align-self: center;
-		padding-left: 1rem;
 		margin-right: 0px;
-		padding-bottom: 4px;
-		display: none;
+		display: grid;
+		place-content: center;
 		font-size: 18px;
 		text-align: right;
 		border: none;
 		background: inherit;
+		cursor: pointer;
 	}
 
 	.menu:hover {
 		color: var(--white);
-	}
-
-	@media (max-width: 1200px) {
-		.menu {
-			display: block;
-		}
-
-		.pre-last {
-			margin-right: 1rem;
-		}
-	}
-
-	.hidden {
-		display: none;
 	}
 </style>

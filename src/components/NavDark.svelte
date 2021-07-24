@@ -8,7 +8,7 @@
 	import BurgerIcon from '../components/BurgerIcon.svelte';
 	import ReturnArrow from '../components/ReturnArrow.svelte';
 
-	$: isArtPage = $page.path.includes('/design/art/');
+	$: isSubPage = $page.path.split('/').length >= 4;
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -16,7 +16,9 @@
 <nav class={$$props.class}>
 	<a href="/"><HomeButton /></a>
 	<a href="/writing"><WritingButton /></a>
-	<a href="/design/art" class:hidden={!isArtPage}><ReturnArrow class="return-arrow" /></a>
+	<a href={$page.path.split('/').slice(0, -1).join('/')} class:hidden={!isSubPage}
+		><ReturnArrow class="return-arrow" /></a
+	>
 	<a href="/contact" class="right-item"><ContactButton /></a>
 	<div class="menu" on:click={() => dispatch('menu-click')}>
 		<BurgerIcon class="burger-icon" />

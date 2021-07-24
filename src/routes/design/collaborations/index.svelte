@@ -1,16 +1,16 @@
 <script lang="ts">
-	import data from '../../data/collaborations';
-	import Sidebar from '../../components/Sidebar.svelte';
+	import data from '../../../data/collaborations';
+	import Sidebar from '../../../components/Sidebar.svelte';
 
 	const chunk = (arr: any[], columnCount: number): any[][] =>
 		Array.from({ length: columnCount }, (_v, arrayIndex) => {
 			return arr.filter((_it, itemIndex) => itemIndex % columnCount === arrayIndex);
 		});
 
-	let columns = chunk(data.cards, 3);
+	let columns = chunk(Object.entries(data), 3);
 	let clientWidth = Infinity;
 
-	$: columns = chunk(data.cards, clientWidth >= 1200 ? 3 : clientWidth >= 768 ? 2 : 1);
+	$: columns = chunk(Object.entries(data), clientWidth >= 1200 ? 3 : clientWidth >= 768 ? 2 : 1);
 </script>
 
 <svelte:window bind:innerWidth={clientWidth} />
@@ -21,19 +21,19 @@
 	<div class="masonry">
 		{#each columns as cards}
 			<div class="column">
-				{#each cards as card}
-					<div class={`card ${card.id}`}>
+				{#each cards as [id, card]}
+					<a class={`card ${id}`} href="/design/collaborations/{id}">
 						<img
-							class="card-image {card.id}"
+							class="card-image {id}"
 							src={`/images/collaborations/${card.img}`}
 							alt={card.alt}
 						/>
-						<div class="card-main {card.id}">
-							<h3 class="card-title {card.id}">{card.title}</h3>
-							<p class="card-authors {card.id}">{card.authors}</p>
-							<p class="card-description {card.id}">{card.description}</p>
+						<div class="card-main {id}">
+							<h3 class="card-title {id}">{card.title}</h3>
+							<p class="card-authors {id}">{card.authors}</p>
+							<p class="card-description {id}">{card.description}</p>
 						</div>
-					</div>
+					</a>
 				{/each}
 			</div>
 		{/each}
@@ -72,6 +72,7 @@
 		cursor: pointer;
 		min-width: 20ch;
 		max-width: 40ch;
+		text-decoration: none;
 	}
 
 	.card-image {

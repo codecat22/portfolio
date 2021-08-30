@@ -1,23 +1,10 @@
 <script lang="ts">
-	import FilterBar from '../../../components/FilterBar.svelte';
+	import FilterBar from '$components/FilterBar.svelte';
+	import { makeTagsFromUrls } from '$utils/index';
 	const photosImport = import.meta.glob('/static/images/art/photos/**/*.{jpg,JPG}');
 
 	const allPhotoUrls = Object.keys(photosImport);
-	const tags = [
-		...new Set(
-			allPhotoUrls
-				.map((it) =>
-					it
-						.split('/')
-						.pop()
-						.split('.')[0]
-						.split(',')
-						.filter((v) => isNaN(parseInt(v)))
-						.map((v) => v.trim())
-				)
-				.flat(1)
-		)
-	];
+	const tags = makeTagsFromUrls(allPhotoUrls);
 
 	let filter: FilterOptions = 'featured';
 	let selectedTags: string[] = ['animals'];
@@ -27,6 +14,8 @@
 			: filter === 'tags'
 			? allPhotoUrls.filter((url) => selectedTags.some((tag) => url.split('/').pop().includes(tag)))
 			: allPhotoUrls;
+
+	const extractNameFromUrl = (url: string): string => url.split('/').pop().split('.')[0];
 </script>
 
 <FilterBar bind:filter {tags} bind:selectedTags />
@@ -35,7 +24,7 @@
 	<div class="photo-gallery">
 		{#each photoUrls as href}
 			<div class="photo-card">
-				<img class="photo" src={href} loading="lazy" alt={href.split('/').pop().split('.')[0]} />
+				<img class="photo" src={href} loading="lazy" alt={extractNameFromUrl(href)} />
 			</div>
 		{/each}
 	</div>

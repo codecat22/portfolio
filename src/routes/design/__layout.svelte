@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Nav from '../../components/NavDark.svelte';
-	import sidebar from '../../stores/sidebar';
+	import Nav from '$components/NavDark.svelte';
+	import sidebar from '$stores/sidebar';
 
 	let clientWidth = Infinity;
 

@@ -1,5 +1,6 @@
 <script lang="ts">
-	import collaborations from '../../../data/collaborations';
+	import collaborations from '$data/collaborations';
+	const { img, authors, alt } = collaborations.cloud;
 </script>
 
 <h2 class="design-title">Cloud Connected</h2>
@@ -8,10 +9,10 @@
 	<aside class="collaboration-aside">
 		<img
 			class="collaboration-image"
-			src="/images/collaborations/{collaborations.cloud.img}"
-			alt={collaborations.cloud.alt}
+			src="/images/collaborations/{img}"
+			alt={alt}
 		/>
-		<p class="collaboration-authors">{collaborations.cloud.authors}</p>
+		<p class="collaboration-authors">{authors}</p>
 	</aside>
 	<div class="collaboration-description">
 		<p>

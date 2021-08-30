@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FilterBar from '../../../components/FilterBar.svelte';
+	import FilterBar from '$components/FilterBar.svelte';
 </script>
 
 <FilterBar tags={[]} />

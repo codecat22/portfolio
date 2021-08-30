@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Contact from '../components/Contact.svelte';
+	import Contact from '$components/Contact.svelte';
 
 	let moveContactOnTop = false;
 </script>

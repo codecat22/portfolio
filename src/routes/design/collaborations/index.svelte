@@ -1,6 +1,6 @@
 <script lang="ts">
-	import data from '../../../data/collaborations';
-	import Sidebar from '../../../components/Sidebar.svelte';
+	import data from '$data/collaborations';
+	import Sidebar from '$components/Sidebar.svelte';
 
 	const chunk = (arr: any[], columnCount: number): any[][] =>
 		Array.from({ length: columnCount }, (_v, arrayIndex) => {

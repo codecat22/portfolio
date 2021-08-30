@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { deviceIsMobile } from '../utils';
-	import scrollOutside from '../directives/scrollOutside';
+	import scrollOutside from '../actions/scrollOutside';
 	import sidebar from '../stores/sidebar';
 	import { navigating } from '$app/stores';
 

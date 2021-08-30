@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Nav from '../components/Nav.svelte';
-	import ArrowRight from '../components/ArrowRight.svelte';
+	import Nav from '$components/Nav.svelte';
+	import ArrowRight from '$components/ArrowRight.svelte';
 
 	const wordCountScale = 0.16;
 	const wordCountMin = 120;

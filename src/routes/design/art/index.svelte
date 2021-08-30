@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ArrowRight from '../../../components/ArrowRight.svelte';
-	import Sidebar from '../../../components/Sidebar.svelte';
+	import ArrowRight from '$components/ArrowRight.svelte';
+	import Sidebar from '$components/Sidebar.svelte';
 </script>
 
 <h2 class="design-title">Visual Art</h2>

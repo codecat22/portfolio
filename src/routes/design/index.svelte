@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Sidebar from '$components/Sidebar.svelte';
 	import cards from '$data/web-design';
-	import { flip } from 'svelte/animate';
 	import { tweened } from 'svelte/motion';
 	import { quartInOut } from 'svelte/easing';
 
@@ -11,10 +10,7 @@
 	const next = (index: number) => (index + 1 >= cards.length ? 0 : index + 1);
 
 	let cardIndex = 0;
-	$: console.log({ cardIndex, prev: prev(cardIndex), next: next(cardIndex) });
 	$: visibleCards = [cards[prev(cardIndex)], cards[cardIndex], cards[next(cardIndex)]];
-	$: console.log(visibleCards.map((it) => it.img));
-	$: console.log({ visibleCards });
 </script>
 
 <h3
@@ -49,7 +45,7 @@
 		</div>
 		<button class="arrow right" on:click={() =>{
 			 cardIndex = next(cardIndex)
-			 sliderPosition.set(`-${(cardIndex * ) - 70}%`)
+			 sliderPosition.set(`-${(cardIndex * 12) - 70}%`)
 		}}>
 			<svg viewBox="0 0 100 100"
 				><path

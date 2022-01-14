@@ -1,145 +1,74 @@
 <script lang="ts">
+	import data from '$data/web-design';
 	import Sidebar from '$components/Sidebar.svelte';
-	import cards from '$data/web-design';
-	import { tweened } from 'svelte/motion';
-	import { quartInOut } from 'svelte/easing';
 
-	const sliderPosition = tweened("-70%", { duration: 300, easing: quartInOut });
+	const chunk = (arr: any[], columnCount: number): any[][] =>
+		Array.from({ length: columnCount }, (_v, arrayIndex) => {
+			return arr.filter((_it, itemIndex) => itemIndex % columnCount === arrayIndex);
+		});
 
-	const prev = (index: number) => (index - 1 < 0 ? cards.length - 1 : index - 1);
-	const next = (index: number) => (index + 1 >= cards.length ? 0 : index + 1);
+	let columns = chunk(Object.entries(data), 3);
+	let clientWidth = Infinity;
 
-	let cardIndex = 0;
-	$: visibleCards = [cards[prev(cardIndex)], cards[cardIndex], cards[next(cardIndex)]];
+	$: columns = chunk(Object.entries(data), clientWidth >= 1200 ? 3 : clientWidth >= 768 ? 2 : 1);
 </script>
 
-<h3
-	class="design-title"
-	on:click={() =>
-		(visibleCards = [cards[next(cardIndex)], cards[cardIndex], cards[prev(cardIndex)]])}
->
-	Web Design
-</h3>
+<svelte:window bind:innerWidth={clientWidth} />
+
+<h2 class="design-title">Web Design</h2>
+
 <section class="design-main">
-	<div class="slider">
-		<button class="arrow left" on:click={() => (cardIndex = prev(cardIndex))}>
-			<svg viewBox="0 0 100 100"
-				><path
-					fill="currentColor"
-					d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"
-					transform="translate(15,0)"
-				/></svg
-			>
-		</button>
-		<div class="cards hide-scrollbar">
-			{#each visibleCards as card}
+	<div class="masonry">
+		{#each columns as cards}
+			<div class="column">
+				{#each cards as [_id, card]}
 				<a class="card" href={card.href}>
 					<img class="card-image" src={card.img} alt={card.alt} />
 					<div class="card-main">
 						<h3 class="card-title">{card.title}</h3>
-						<p class="card-sub-title">{card.subtitle}</p>
+						<p class="card-subtitle">{card.subtitle}</p>
 						<p class="card-description">{card.description}</p>
 					</div>
 				</a>
-			{/each}
-		</div>
-		<button class="arrow right" on:click={() =>{
-			 cardIndex = next(cardIndex)
-			 sliderPosition.set(`-${(cardIndex * 12) - 70}%`)
-		}}>
-			<svg viewBox="0 0 100 100"
-				><path
-					fill="currentColor"
-					d="M 50,0 L 60,10 L 20,50 L 60,90 L 50,100 L 0,50 Z"
-					transform="translate(15,0)"
-				/></svg
-			>
-		</button>
+				{/each}
+			</div>
+		{/each}
 	</div>
-	<!-- <a href="https://www.figma.com/file/XACh4De1qqqHQvQT3MLx8S/Catfolio" target="blank" class="portfolio-link">
-	Under the hood</a> -->
 </section>
 
 <Sidebar
 	links={[
+		{ label: 'Web Design', href: '/design' },
 		{ label: 'Visual Art', href: '/design/art' },
-		{ label: 'Collab', href: '/design/collaborations' },
 		{ label: 'Other Projects', href: '/design/other' }
 	]}
 />
 
 <style>
-	.slider {
-		position: relative;
-		margin-left: auto;
-		margin-right: auto;
-		overflow: hidden;
-	}
-
-	.arrow {
-		position: absolute;
-		width: 3em;
-		display: grid;
-		place-content: center;
-		background: rgba(255, 250, 255, 0.75);
-		border-radius: 50%;
-		padding: 0.5rem;
-		transition: all 0.3s ease;
-		border: none;
-	}
-
-	.arrow:hover {
-		background: rgba(255, 250, 255, 1);
-	}
-
-	.left {
-		left: 3%;
-		top: 50%;
-	}
-
-	.right {
-		transform: rotate(180deg);
-		right: 3%;
-		top: 50%;
-	}
-
-	.arrow > svg {
-		color: var(--green);
-	}
-
-	.cards {
+	.masonry {
 		display: flex;
-		gap: 1rem;
-		/* overflow-x: hidden; */
-		scroll-snap-type: x mandatory;
-		scroll-behavior: smooth;
-		-webkit-overflow-scrolling: touch;
-		transition: all 0.3s ease;
-		transform: translateX(-70%);
+		justify-content: center;
 	}
 
-	.hide-scrollbar {
-		-ms-overflow-style: none; /* IE and Edge */
-		scrollbar-width: none; /* Firefox */
-	}
-
-	.hide-scrollbar::-webkit-scrollbar {
-		display: none;
+	.column {
+		display: flex;
+		flex-flow: column;
 	}
 
 	.card {
-		flex: 0 0 80%;
 		box-shadow: 2px 2px 4px 0px #0a0a0a80;
 		border: 1px solid rgba(10, 10, 10, 0.3);
 		border-top: 5px solid var(--black);
+		margin: 0.5rem;
+		margin-top: 0;
+		margin-bottom: 1rem;
 		display: flex;
 		flex-direction: column;
 		height: min-content;
 		cursor: pointer;
+		min-width: 20ch;
+		max-width: 40ch;
 		text-decoration: none;
-		scroll-snap-align: center;
-		text-decoration: none;
-		color: var(--white);
 	}
 
 	.card-image {
@@ -157,13 +86,11 @@
 		font-family: 'Lalezar', cursive;
 		font-weight: 400;
 		color: var(--white);
-		text-align: center;
 		--val: 2vw;
 		--min: 1.8em;
 	}
 
-	.card-sub-title {
-		text-align: center;
+	.card-subtitle {
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
 		color: var(--light-gray);

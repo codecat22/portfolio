@@ -1,19 +1,19 @@
 export default [
 	{
-		title: 'Trebel 2019',
-		href: '#',
-		img: '/images/web-design/trebel16-2021-copy.PNG',
-		alt: 'main page of trebel16 website, 2019 version',
-		subtitle: 'June 2019 - December 2019',
-		description: `A catalogue website showing off the products offered by Trebel16 (a company which sells window frames, joinery, doors, facings, and other similar items) and providing contact and booking information to the customer. `
-	},
-	{
 		title: 'Trebel 2021',
 		href: '#',
 		img: '/images/web-design/trebel16-2021.PNG',
 		alt: 'main page of trebel16 website, 2021 version',
 		subtitle: 'Ongoing since June 2021',
 		description: `An improved version of the Trebel16 website, created to meet the updated needs of the company and its clients now that it has expanded its reach.`
+	},
+	{
+		title: 'Trebel 2019',
+		href: '#',
+		img: '/images/web-design/trebel16-2021-copy.PNG',
+		alt: 'main page of trebel16 website, 2019 version',
+		subtitle: 'June 2019 - December 2019',
+		description: `A catalogue website showing off the products offered by Trebel16 (a company which sells window frames, joinery, doors, facings, and other similar items) and providing contact and booking information to the customer. `
 	},
 	{
 		title: 'Grocery app',

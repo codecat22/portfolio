@@ -2,6 +2,9 @@
 	import FilterBar from '$components/FilterBar.svelte';
 	import { makeTagsFromUrls } from '$utils/index';
 	const galleryImport = import.meta.glob('/static/images/art/gallery/**/*.{jpg,JPG}');
+	const names = [
+		"Name 1"
+	]
 
 	const getNum = (url: string): number => parseInt(url.split('/').pop().split(',')[0].trim());
 
@@ -27,10 +30,10 @@
 
 <section class="design-main">
 	<div class="art-gallery">
-		{#each galleryUrls as href}
+		{#each galleryUrls as href, i}
 			<div class="art-card card-{getNum(href)}">
 				<img class="art" src={href} loading="lazy" alt={extractNameFromUrl(href)} />
-				<p class="art-description">A pretty</p>
+				<p class="art-description">{names[i] || "A pretty"}</p>
 			</div>
 		{/each}
 	</div>
@@ -41,6 +44,12 @@
 		display: flex;
 		flex-flow: row wrap;
 		/* justify-content: center; */
+	}
+
+	@media (max-width: 600px) {
+		.art-gallery {
+			justify-content: center;
+		}
 	}
 
 	.art-card {

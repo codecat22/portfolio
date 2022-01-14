@@ -21,7 +21,7 @@ export default {
 		authors: 'Xuehua Fu | Siyana Ivanova | Tomass Wilson | Roni Kaufman | Ryan Yared',
 		title: 'Yunak Game',
 		description:
-			'cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat.'
+			'Yunak is a 2D puzzle game demo based on Bulgarian folk tales, created for the Computer Game Design course. The demo consists of snakes-and-ladders style puzzles and multipath dialogue scenes, introducing the player to various folklore creatures and leading to one of three possible endings.'
 	},
 	elevator: {
 		img: 'elevator.png',
@@ -29,7 +29,7 @@ export default {
 		authors: 'Linnea Bonnevier | Siyana Ivanova | Ramtin Erfani Torbaghani | Jiatong Zhong',
 		title: 'Standing on Your Feet',
 		description:
-			'cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat...'
+			'In this project we used Soma Design to create an elevator prototype for the Interaction Design as a Reflective Practice course, based on a brief provided by ManyOne. Soma Design practices focus on subjective bodily experiences and movements and the feelings and meaning they evoke or create; in our project, we focused on the somatic experience in the feet.'
 	},
 	robot: {
 		img: 'robot.png',
@@ -37,7 +37,7 @@ export default {
 		authors: 'Ioana Cotutiu | August Heddini | Sophia Hettich | Siyana Ivanova',
 		title: 'Furhat Culinary Instructor',
 		description:
-			'Using the robot Furhat, we created an interactable cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat...'
+			'Using the robot Furhat, we created an interactive cooking assistant/ instructor for beginner home cooks. Furhat walks users through recipes, allowing them to ask questions and revisit steps along the way.'
 	},
 	transfer: {
 		img: 'transfer.png',
@@ -45,7 +45,7 @@ export default {
 		authors: 'Hope Blaszkowska | Siyana Ivanova | Marin Karamihalev | Jae Sun Lee | Rafal Ziomek',
 		title: 'Style Transfer from Artworks to Photographs',
 		description:
-			'Using the robot Furhat, we created an interactable cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat...'
+			'This project, created for the Machine Learning Workshop course, is a program which performs style transfer from one image to another: in simple terms, it takes two images as input - one from which the style will be extracted and one to which it will be applied - and outputs a filtered version of the content image, changed to emulate the chosen style. The algorithm is largely based on a 2015 paper called “A Neural Algorithm of Artistic Style” by Gatys, Ecker, and Bethge.'
 	},
 	thesis: {
 		img: 'thesis.png',
@@ -53,6 +53,6 @@ export default {
 		authors: 'Siyana Ivanova | Marin Karamihalev',
 		title: 'Precipitation Data Processing and Visualisation Web System',
 		description:
-			'Using the robot Furhat, we created an interactable cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat...'
+			'My Bachelor’s thesis, in collaboration with Marin Karamihalev and under the supervision of dr inż. Rafał Jóźwiak, focuses on an automatic web system for downloading, processing, and visualizing precipitation data obtained via NASA’s Global Precipitation Measurement Mission. The system was developed for use by the Warsaw-based firm Satagro, which provides farmers with data useful in determining crop maintenance needs and predicting crop yields.'
 	}
 };

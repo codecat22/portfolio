@@ -109,6 +109,7 @@
 		align-content: center;
 		justify-items: center;
 		margin-top: 5vw;
+		margin-bottom: 5vw;
 		padding-left: 5vw;
 		padding-right: 5vw;
 		grid-gap: 2vw;

@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { deviceIsMobile } from '../utils';
 	import scrollOutside from '../actions/scrollOutside';
-	import sidebar from '../stores/sidebar';
+	import sidebarIsOpen from '../stores/sidebar';
 	import { navigating } from '$app/stores';
 
 	export let links: { href: string; label: string }[] = [];
@@ -11,20 +11,21 @@
 
 	onMount(() => {
 		isMobile = deviceIsMobile();
+		sidebarIsOpen.set(!isMobile);
 	});
 
 	$: if ($navigating !== null) {
-		sidebar.set(false);
+		sidebarIsOpen.set(false);
 	}
 
 	const handleScrollOutside = () => {
 		if (!isMobile) return;
-		sidebar.set(false);
+		sidebarIsOpen.set(false);
 	};
 </script>
 
-<nav class:closed={!$sidebar} use:scrollOutside on:scroll-outside={handleScrollOutside}>
-	<ul class:closed={!$sidebar}>
+<nav class:closed={!$sidebarIsOpen} use:scrollOutside on:scroll-outside={handleScrollOutside}>
+	<ul class:closed={!$sidebarIsOpen}>
 		{#each links as { href, label }}
 			<li>
 				<a {href}>

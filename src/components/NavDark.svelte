@@ -7,6 +7,7 @@
 	import ContactButton from '../components/ContactIconDark.svelte';
 	import BurgerIcon from '../components/BurgerIcon.svelte';
 	import ReturnArrow from '../components/ReturnArrow.svelte';
+	import contact from '$stores/contact';
 
 	$: isSubPage = $page.path.split('/').length >= 4;
 
@@ -19,7 +20,7 @@
 	<a href={$page.path.split('/').slice(0, -1).join('/')} class:hidden={!isSubPage}
 		><ReturnArrow class="return-arrow" /></a
 	>
-	<a href="/contact" class="right-item"><ContactButton /></a>
+	<button class="right-item"><ContactButton on:click={() => contact.set(true)} /></button>
 	<div class="menu" on:click={() => dispatch('menu-click')}>
 		<BurgerIcon class="burger-icon" />
 	</div>
@@ -41,6 +42,12 @@
 
 	.right-item {
 		margin-left: auto;
+	}
+
+	button {
+		background: none;
+		border: none;
+		cursor: pointer;
 	}
 
 	a {

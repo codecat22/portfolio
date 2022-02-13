@@ -221,3 +221,7 @@ p {
 #svelte {
     overflow: hidden;
 }
+
+main {
+    position: relative;
+}

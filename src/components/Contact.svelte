@@ -1,24 +1,38 @@
 <script>
 	import BackButton from '../components/BackButton.svelte';
-
-	export let hasBack = false;
+	import contact from "$stores/contact";
 </script>
 
-<div class={$$props.class}>
+<div class:move-up={$contact}>
 	<p><b>Email</b></p>
 	<p>siyana.ivanova13@gmail.com</p>
 	<p>siyanai@kth.se</p>
-	<br />
-	<p><b>Social media</b></p>
-	<p>Instagram: @codecat</p>
-	<p>LinkedIn: Siyana Ivanova</p>
 
-	{#if hasBack}
-		<BackButton class="back-button" on:click />
-	{/if}
+	<br />
+
+	<p><b>Social media</b></p>
+	<p>Instagram: <a href="https://www.instagram.com/codecat20">@codecat</a></p>
+	<p>LinkedIn: <a href="https://www.linkedin.com/in/siyana-ivanova-24b48b1a1">Siyana Ivanova</a></p>
+
+	<br />
+
+	<p><b>Resume</b></p>
+	<p>Download <a href="/static/data/contact/Resume2022.pdf" target="blank">here</a></p>
+
+	<BackButton class="back-button" on:click={() => contact.set(false)} />
 </div>
 
 <style>
+	.move-up {
+		transform: translateY(0%);
+		transition: transform 0.5s ease-in;
+	}
+
+	a {
+		text-decoration: none;
+		color: #7d8491;
+	}
+
 	div > :global(.back-button) {
 		position: absolute;
 		bottom: 2%;
@@ -33,6 +47,11 @@
 		color: var(--black);
 		justify-content: center;
 		align-items: center;
+		width: 100%;
+		top: 0;
+		position: absolute;
+		transform: translateY(100%);
+		transition: transform 0.5s ease-in;
 	}
 
 	p {

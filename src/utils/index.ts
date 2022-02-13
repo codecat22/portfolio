@@ -19,3 +19,5 @@ export const makeTagsFromUrls = (urls: string[]): string[] => [
 			.flat(1)
 	)
 ];
+
+export const checkPlaceholder = (p: string): string => p === "[placeholder]" ? "/images/placeholder-cat.jpg" : p

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Contact from '$components/Contact.svelte';
 	import Nav from '$components/NavDark.svelte';
 	import sidebar from '$stores/sidebar';
 
@@ -14,6 +15,7 @@
 <main>
 	<Nav class="top-nav" on:menu-click={handleMenuClick} />
 	<slot />
+	<Contact />
 </main>
 
 <style>

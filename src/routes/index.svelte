@@ -1,13 +1,12 @@
 <script lang="ts">
 	import Contact from '$components/Contact.svelte';
-
-	let moveContactOnTop = false;
+	import contact from '$stores/contact';
 </script>
 
 <main>
 	<aside>
 		<h3 class="portfolio-title">Interactive Portfolio</h3>
-		<a href="/design/collaborations" class="design-link">
+		<a href="/design" class="design-link">
 			<h1 class="design-header">Design</h1>
 		</a>
 	</aside>
@@ -18,27 +17,11 @@
 		</a>
 	</aside>
 	<h2>Welcome! En<em>joy your stay.</em></h2>
-	<button on:click={() => (moveContactOnTop = true)}>Contact me</button>
-	<Contact
-		hasBack
-		class="contact {moveContactOnTop && 'move-up'}"
-		on:click={() => (moveContactOnTop = false)}
-	/>
+	<button on:click={() => contact.set(true)}>Contact me</button>
+	<Contact />
 </main>
 
 <style>
-	main > :global(.contact) {
-		width: 100%;
-		position: absolute;
-		transform: translateY(100%);
-		transition: transform 0.5s ease-in;
-	}
-
-	main > :global(.move-up) {
-		transform: translateY(0%);
-		transition: transform 0.5s ease-in;
-	}
-
 	button {
 		text-decoration: none;
 		color: var(--white);

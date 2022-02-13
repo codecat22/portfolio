@@ -1,6 +1,7 @@
 <script lang="ts">
-	import data from '$data/collaborations';
+	import data from '$data/web-design';
 	import Sidebar from '$components/Sidebar.svelte';
+	import placeholder from '$actions/placeholder';
 
 	const chunk = (arr: any[], columnCount: number): any[][] =>
 		Array.from({ length: columnCount }, (_v, arrayIndex) => {
@@ -15,23 +16,19 @@
 
 <svelte:window bind:innerWidth={clientWidth} />
 
-<h2 class="design-title">Collaborations</h2>
+<h2 class="design-title">Web Design</h2>
 
 <section class="design-main">
 	<div class="masonry">
 		{#each columns as cards}
 			<div class="column">
-				{#each cards as [id, card]}
-					<a class={`card ${id}`} href="/design/collaborations/{id}">
-						<img
-							class="card-image {id}"
-							src={`/images/collaborations/${card.img}`}
-							alt={card.alt}
-						/>
-						<div class="card-main {id}">
-							<h3 class="card-title {id}">{card.title}</h3>
-							<p class="card-authors {id}">{card.authors}</p>
-							<p class="card-description {id}">{card.description}</p>
+				{#each cards as [_id, card]}
+					<a class="card" href={card.href}>
+						<img class="card-image" use:placeholder src={card.img} alt={card.alt} />
+						<div class="card-main">
+							<h3 class="card-title">{card.title}</h3>
+							<p class="card-subtitle">{card.subtitle}</p>
+							<p class="card-description">{card.description}</p>
 						</div>
 					</a>
 				{/each}
@@ -42,8 +39,8 @@
 
 <Sidebar
 	links={[
-		{ label: 'Web Design', href: '/design/web' },
 		{ label: 'Visual Art', href: '/design/art' },
+		{ label: 'Collab', href: '/design/collaborations' },
 		{ label: 'Graphic Design', href: '/design/graphic' }
 	]}
 />
@@ -94,7 +91,7 @@
 		--min: 1.8em;
 	}
 
-	.card-authors {
+	.card-subtitle {
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
 		color: var(--light-gray);

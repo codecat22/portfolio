@@ -1,42 +1,81 @@
 export default [
 	{
+		title: 'Protecto',
+		href: '/design/web/protecto',
+		img: '/images/web-design/protecto.png',
+		alt: 'Protecto screenshot',
+		pageImages: [
+			{ img: '/images/web-design/protecto.png', alt: 'Protecto screenshot' },
+			{ img: '/images/web-design/protecto-2.png', alt: 'Protecto user settings screenshot' }
+		],
+		subtitle: 'November 2021 - January 2022',
+		description: `Website for a personal online security system that keeps the user's files safe even when sharing.`
+	},
+	{
 		title: 'Trebel 2021',
-		href: '#',
+		href: '/design/web/trebel21',
 		img: '/images/web-design/trebel16-2021.PNG',
 		alt: 'main page of trebel16 website, 2021 version',
+		pageImages: [
+			{ img: '/images/web-design/trebel21-1.PNG', alt: 'trebel doors page screenshot' },
+			{ img: '/images/web-design/trebel21-2.PNG', alt: 'trebel map page screenshot' },
+			{ img: '/images/web-design/trebel21-3.PNG', alt: 'trebel history page screenshot' }
+		],
 		subtitle: 'Ongoing since June 2021',
 		description: `An improved version of the Trebel16 website, created to meet the updated needs of the company and its clients now that it has expanded its reach.`
 	},
 	{
+		title: 'Zeleneya mobile',
+		href: '/design/web/zeleneya',
+		img: '/images/web-design/zeleneya-mobile.png',
+		alt: 'Zeleneya mobile screenshot',
+		pageImages: [
+			{ img: '/images/web-design/zeleneya-mobile.png', alt: 'Zeleneya mobile screenshot' },
+			{
+				img: '/images/web-design/zeleneya-mobile-2.png',
+				alt: 'Zeleneya mobile additional pages screenshot'
+			}
+		],
+		subtitle: 'August 2021 - October 2021',
+		description: `Mobile version of the mutual aid and sustainability app Zeleneya.`
+	},
+	{
+		title: 'Zeleneya desktop',
+		href: '/design/web/zeleneya-desktop',
+		img: '/images/placeholder-cat.jpg',
+		alt: 'Zeleneya desktop screenshot',
+		pageImages: [
+			{ img: '[placeholder]', alt: 'A cat' },
+			{ img: '[placeholder]', alt: 'A cat' }
+		],
+		subtitle: 'August 2021 - October 2021',
+		description: `Desktop version of the “neighbourly sharing” app Zeleneya, currently in development by a Bulgarian team for a local audience, aiming to bring back and make easy the practice of gifting and reusing old items instead of throwing them away.`
+	},
+	{
 		title: 'Trebel 2019',
-		href: '#',
-		img: '/images/web-design/trebel16-2021-copy.PNG',
+		href: '/design/web/trebel19',
+		img: '/images/web-design/trebel16-2019.PNG',
 		alt: 'main page of trebel16 website, 2019 version',
+		pageImages: [
+			{
+				img: '/images/web-design/trebel16-2019.PNG',
+				alt: 'main page of trebel16 website, 2019 version'
+			},
+			{ img: '/images/web-design/trebel16-2.png', alt: 'brochure page of trebel16 website, 2019 version' },
+		],
 		subtitle: 'June 2019 - December 2019',
 		description: `A catalogue website showing off the products offered by Trebel16 (a company which sells window frames, joinery, doors, facings, and other similar items) and providing contact and booking information to the customer. `
 	},
 	{
 		title: 'Grocery app',
-		href: '#',
-		img: '/images/web-design/trebel16-2019.PNG',
+		href: '/design/web/grocery',
+		img: '/images/web-design/grocery-app.png',
 		alt: 'screenshot of example lists',
+		pageImages: [
+			{ img: '/images/web-design/grocery-app.png', alt: 'screenshot of example lists' },
+			{ img: '/images/web-design/grocery-app-2.png', alt: 'screenshot of additional pages' }
+		],
 		subtitle: 'In development',
 		description: `A simple utility app that allows the user to create and upkeep a multitude of custom lists.`
-	},
-	{
-		title: 'Zeleneya desktop',
-		href: '#',
-		img: '/images/web-design/trebel16-2019.PNG',
-		alt: 'Zeleneya desktop screenshot',
-		subtitle: 'Ongoing since August 2021',
-		description: `Desktop version of the “neighbourly sharing” app Zeleneya, currently in development by a Bulgarian team for a local audience, aiming to bring back and make easy the practice of gifting and reusing old items instead of throwing them away.`
-	},
-	{
-		title: 'Zeleneya mobile',
-		href: '#',
-		img: '/images/web-design/trebel16-2019.PNG',
-		alt: 'Zeleneya mobile screenshot',
-		subtitle: 'Ongoing since August 2021',
-		description: `Mobile version of the mutual aid and sustainability app Zeleneya.`
 	}
 ];

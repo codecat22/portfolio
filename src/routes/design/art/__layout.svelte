@@ -6,8 +6,8 @@
 
 <Sidebar
 	links={[
-		{ label: 'Web Design', href: '/design' },
+		{ label: 'Web Design', href: '/design/web' },
 		{ label: 'Collab', href: '/design/collaborations' },
-		{ label: 'Other Projects', href: '/design/other' }
+		{ label: 'Graphic Design', href: '/design/graphic' }
 	]}
 />

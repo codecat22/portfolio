@@ -3,7 +3,16 @@
 	import { makeTagsFromUrls } from '$utils/index';
 	const galleryImport = import.meta.glob('/static/images/art/gallery/**/*.{jpg,JPG}');
 	const names = [
-		"Name 1"
+		"Bridge at night",
+		"Rila",
+		"Raleigh",
+		"Teatime",
+		"Sofia night",
+		"The eyeball zone",
+		"Identity",
+		"Spring in Sofia",
+		"Country house",
+		"Alexander Nevsky",
 	]
 
 	const getNum = (url: string): number => parseInt(url.split('/').pop().split(',')[0].trim());
@@ -13,7 +22,7 @@
 	const tags = makeTagsFromUrls(allGalleryUrls);
 
 	let filter: FilterOptions = 'featured';
-	let selectedTags: string[] = ['animals'];
+	let selectedTags: string[] = ['black-and-white'];
 	$: galleryUrls =
 		filter === 'featured'
 			? allGalleryUrls.filter((url) => url.includes(`/featured/`))

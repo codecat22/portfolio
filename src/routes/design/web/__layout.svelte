@@ -6,19 +6,19 @@
 
 <Sidebar
 	links={[
-		{ label: 'Web Design', href: '/design/web' },
 		{ label: 'Visual Art', href: '/design/art' },
+		{ label: 'Collab', href: '/design/collaborations' },
 		{ label: 'Graphic Design', href: '/design/graphic' }
 	]}
 />
 
 <style>
-	:global(.collaboration-image) {
+	:global(.web-design-image) {
 		max-width: 100%;
 		height: auto;
 	}
 
-	:global(.collaboration-file-link) {
+	:global(.web-design-file-link) {
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 600;
 		text-decoration: underline;
@@ -26,48 +26,49 @@
 		font-size: inherit;
 	}
 
-	:global(.collaboration-file-link:visited) {
+	:global(.web-design-file-link:visited) {
 		color: var(--light-gray);
 	}
 
-	:global(.collaboration-content) {
+	:global(.web-design-content) {
 		display: grid;
-		grid-template-columns: 3fr 7fr;
+		grid-template-columns: 5fr 5fr;
 	}
 
-	:global(.collaboration-aside) {
+	:global(.web-design-aside) {
 		padding: 0 2em 1em 0;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+        gap: 1em;
 	}
 
-	:global(.collaboration-description) {
+	:global(.web-design-description) {
 		padding: 0 0 0 2em;
 	}
 
 	@media (max-width: 600px) {
-		:global(.collaboration-content) {
+		:global(.web-design-content) {
 			grid-template-columns: 1fr;
 		}
 
-		:global(.collaboration-aside) {
+		:global(.web-design-aside) {
 			padding: 0 1em 1em 1em;
 		}
 
-		:global(.collaboration-description) {
+		:global(.web-design-description) {
 			padding: 0 1em 0 1em;
 		}
 	}
 
 	@media (min-width: 600px) and (max-width: 1200px) {
-		:global(.collaboration-content) {
+		:global(.web-design-content) {
 			padding-left: 1em;
 			padding-right: 1em;
 		}
 	}
 
-	:global(.collaboration-description > p) {
+	:global(.web-design-description > p) {
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 400;
 		color: var(--white);
@@ -75,7 +76,7 @@
 	}
 
 
-	:global(.collaboration-authors) {
+	:global(.web-design-authors) {
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
 		color: var(--light-gray);

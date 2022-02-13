@@ -2,15 +2,22 @@
 	import HomeButton from '../components/HomeButton.svelte';
 	import DesignButton from '../components/DesignButton.svelte';
 	import ContactButton from '../components/ContactButton.svelte';
+	import contact from '$stores/contact';
 </script>
 
 <nav>
 	<a href="/"><HomeButton /></a>
 	<a href="/design/collaborations"><DesignButton /></a>
-	<a href="/contact"><ContactButton /></a>
+	<button><ContactButton on:click={() => contact.set(true)} /></button>
 </nav>
 
 <style>
+	button {
+		background: none;
+		border: none;
+		cursor: pointer;
+	}
+
 	nav {
 		display: flex;
 		align-items: center;

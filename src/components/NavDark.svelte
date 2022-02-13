@@ -48,6 +48,9 @@
 		background: none;
 		border: none;
 		cursor: pointer;
+		display: grid;
+		place-items: center;
+		margin-right: 1rem;
 	}
 
 	a {

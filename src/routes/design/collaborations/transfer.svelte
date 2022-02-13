@@ -1,9 +1,9 @@
 <script lang="ts">
 	import collaborations from '$data/collaborations';
-	const { img, authors, alt } = collaborations.transfer;
+	const { img, authors, alt, title } = collaborations.transfer;
 </script>
 
-<h2 class="design-title">Transfer</h2>
+<h2 class="design-title">{title}</h2>
 
 <section class="design-main collaboration-content">
 	<aside class="collaboration-aside">
@@ -28,7 +28,7 @@
 			appearance of an input artwork is applied to any input photograph. For more details, please
 			refer to the <a
 				target="blank"
-				href="/static/data/collaborations/cloud/Workbook.pdf"
+				href="/static/data/papers/StyleTransferMLW.pdf"
 				class="collaboration-file-link">paper</a
 			> that resulted from this project.
 		</p>

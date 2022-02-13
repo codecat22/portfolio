@@ -42,6 +42,13 @@ export default [
 			'A workbook presenting a design concept for a productivity system centered around a smart desktop lamp called "The Cloud."'
 	},
 	{
+		name: 'StandingOnYourFeetDesignDiary',
+		date: 'September 2021',
+		title: 'Standing On Your Feet Design Diary',
+		abstract:
+			'A design diary about the process of creating the elevator concept in the Standing On Your Feet project.'
+	},
+	{
 		name: 'StyleTransferMLW',
 		date: 'June 2019',
 		title: 'Style Transfer from Artworks to Photographs',
@@ -68,5 +75,6 @@ export default [
 		title: 'Script for the Yunak game demo',
 		abstract:
 			'A draft of the script to a story=based puzzle game based around Bulgarian mythology - Yunak.'
-	}
+	},
+  
 ];

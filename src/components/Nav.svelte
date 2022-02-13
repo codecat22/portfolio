@@ -7,7 +7,7 @@
 
 <nav>
 	<a href="/"><HomeButton /></a>
-	<a href="/design/collaborations"><DesignButton /></a>
+	<a href="/design"><DesignButton /></a>
 	<button><ContactButton on:click={() => contact.set(true)} /></button>
 </nav>
 
@@ -16,6 +16,9 @@
 		background: none;
 		border: none;
 		cursor: pointer;
+		display: grid;
+		place-items: center;
+		margin-right: 1rem;
 	}
 
 	nav {

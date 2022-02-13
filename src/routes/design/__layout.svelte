@@ -12,7 +12,7 @@
 
 <svelte:window bind:innerWidth={clientWidth} />
 
-<main>
+<main class="design-layout-main">
 	<Nav class="top-nav" on:menu-click={handleMenuClick} />
 	<slot />
 	<Contact />
@@ -23,7 +23,7 @@
 		grid-column: 1 / -1;
 	}
 
-	main {
+	:global(.design-layout-main) {
 		display: grid;
 		grid-template-columns: 17% 1fr 17%;
 		grid-template-rows: min-content min-content 1fr;

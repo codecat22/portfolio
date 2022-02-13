@@ -1,9 +1,9 @@
 <script lang="ts">
 	import collaborations from '$data/collaborations';
-	const { img, authors, alt } = collaborations.map;
+	const { img, authors, alt, title } = collaborations.map;
 </script>
 
-<h2 class="design-title">LotR Map</h2>
+<h2 class="design-title">{title}</h2>
 
 <section class="design-main collaboration-content">
 	<aside class="collaboration-aside">
@@ -30,11 +30,11 @@
 			explore at <a
 				target="blank"
 				href="https://lotr-project.vercel.app/"
-				class="collaboration-file-link">vercel</a
+				class="collaboration-file-link">lotr-project.vercel.app</a
 			>, while the dataset can be viewed
 			<a
 				target="blank"
-				href="/static/data/collaborations/cloud/Workbook.pdf"
+				href="/static/data/collaborations/cloud/LotR-Timeline.pdf"
 				class="collaboration-file-link">here</a
 			>.
 		</p>

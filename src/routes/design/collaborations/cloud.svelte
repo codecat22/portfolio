@@ -1,9 +1,9 @@
 <script lang="ts">
 	import collaborations from '$data/collaborations';
-	const { img, authors, alt } = collaborations.cloud;
+	const { img, authors, alt, title } = collaborations.cloud;
 </script>
 
-<h2 class="design-title">Cloud Connected</h2>
+<h2 class="design-title">{title}</h2>
 
 <section class="design-main collaboration-content">
 	<aside class="collaboration-aside">

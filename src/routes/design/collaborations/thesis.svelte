@@ -1,9 +1,9 @@
 <script lang="ts">
 	import collaborations from '$data/collaborations';
-	const { img, authors, alt } = collaborations.thesis;
+	const { img, authors, alt, title } = collaborations.thesis;
 </script>
 
-<h2 class="design-title">Thesis</h2>
+<h2 class="design-title">{title}</h2>
 
 <section class="design-main collaboration-content">
 	<aside class="collaboration-aside">
@@ -26,10 +26,11 @@
 			forecasting models.
 		</p>
 		<p>
-            The full text of the thesis is available <a
-            target="blank"
-            href="/static/data/collaborations/cloud/Workbook.pdf"
-            class="collaboration-file-link">here</a>.
+			The full text of the thesis is available <a
+				target="blank"
+				href="/static/data/papers/PDPVWebSystemThesis.pdf"
+				class="collaboration-file-link">here</a
+			>.
 		</p>
 	</div>
 </section>

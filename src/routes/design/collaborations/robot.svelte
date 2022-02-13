@@ -1,9 +1,9 @@
 <script lang="ts">
 	import collaborations from '$data/collaborations';
-	const { img, authors, alt } = collaborations.robot;
+	const { img, authors, alt, title } = collaborations.robot;
 </script>
 
-<h2 class="design-title">Furhat</h2>
+<h2 class="design-title">{title}</h2>
 
 <section class="design-main collaboration-content">
 	<aside class="collaboration-aside">
@@ -25,12 +25,12 @@
 		<p>
 			The report detailing our project and pilot study can be found <a
 				target="blank"
-				href="/static/data/collaborations/cloud/Workbook.pdf"
+				href="https://www.youtube.com/watch?v=0NqJQjho_zU"
 				class="collaboration-file-link">here</a
 			>, and a video showing off the Furhat Instructor is available to watch
 			<a
 				target="blank"
-				href="/static/data/collaborations/cloud/Workbook.pdf"
+				href="/static/data/papers/FurhatCulinaryInstructor.pdf"
 				class="collaboration-file-link">here</a
 			>.
 		</p>

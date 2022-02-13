@@ -11,7 +11,7 @@
 	<br />
 
 	<p><b>Social media</b></p>
-	<p>Instagram: <a href="https://www.instagram.com/codecat20">@codecat</a></p>
+	<p>Instagram: <a href="https://www.instagram.com/kotbot94">@kotbot94</a></p>
 	<p>LinkedIn: <a href="https://www.linkedin.com/in/siyana-ivanova-24b48b1a1">Siyana Ivanova</a></p>
 
 	<br />
@@ -36,6 +36,7 @@
 	div > :global(.back-button) {
 		position: absolute;
 		bottom: 2%;
+		transform: rotate(180deg);
 	}
 
 	div {
@@ -48,10 +49,10 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		top: 0;
+		transform: translateY(-100%);
 		position: absolute;
-		transform: translateY(100%);
 		transition: transform 0.5s ease-in;
+		z-index: 101;
 	}
 
 	p {

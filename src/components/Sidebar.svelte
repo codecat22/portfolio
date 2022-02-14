@@ -3,11 +3,17 @@
 	import { deviceIsMobile } from '../utils';
 	import scrollOutside from '../actions/scrollOutside';
 	import sidebarIsOpen from '../stores/sidebar';
-	import { navigating } from '$app/stores';
+	import { navigating, page } from '$app/stores';
 
-	export let links: { href: string; label: string }[] = [];
+	const links = [
+		{ label: 'Web Design', href: '/design/web' },
+		{ label: 'Graphic Design', href: '/design/graphic' },
+		{ label: 'Collab', href: '/design/collaborations' },
+		{ label: 'Visual Art', href: '/design/art' },
+	]
 
 	let isMobile = false;
+	$: current = $page.path;
 
 	onMount(() => {
 		isMobile = deviceIsMobile();
@@ -27,7 +33,7 @@
 <nav class:closed={!$sidebarIsOpen} use:scrollOutside on:scroll-outside={handleScrollOutside}>
 	<ul class:closed={!$sidebarIsOpen}>
 		{#each links as { href, label }}
-			<li>
+			<li class:disabled={current === href}>
 				<a {href}>
 					{#each label.split(' ') as labelPart}
 						<h3>{labelPart}</h3>
@@ -85,6 +91,19 @@
 		transition: all ease-in-out 0.3s;
 		height: 22%;
 		text-decoration: none;
+		background-color: inherit;
+		color: inherit;
+	}
+
+	.disabled {
+		pointer-events: none;
+		color: var(--gray);
+	}
+
+	li {
+		width: 100%;
+		display: flex;
+		align-items: center;
 		color: var(--light-gray);
 	}
 
@@ -105,6 +124,9 @@
 		--val: 1.3vw;
 		transition: all linear 0.3s;
 		color: inherit;
+		background-color: inherit;
+		width: 100%;
+		text-align: center;
 	}
 
 	@media (max-width: 1200px) {

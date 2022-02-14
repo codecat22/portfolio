@@ -4,14 +4,6 @@
 
 <slot />
 
-<Sidebar
-	links={[
-		{ label: 'Visual Art', href: '/design/art' },
-		{ label: 'Collab', href: '/design/collaborations' },
-		{ label: 'Graphic Design', href: '/design/graphic' }
-	]}
-/>
-
 <style>
 	:global(.web-design-image) {
 		max-width: 100%;

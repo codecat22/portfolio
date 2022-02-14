@@ -20,9 +20,11 @@
 	<a href={$page.path.split('/').slice(0, -1).join('/')} class:hidden={!isSubPage}
 		><ReturnArrow class="return-arrow" /></a
 	>
-	<button class="right-item"><ContactButton on:click={() => contact.set(true)} /></button>
-	<div class="menu" on:click={() => dispatch('menu-click')}>
-		<BurgerIcon class="burger-icon" />
+	<div class="right-item grd">
+		<button><ContactButton on:click={() => contact.set(true)} /></button>
+		<div class="menu" on:click={() => dispatch('menu-click')}>
+			<BurgerIcon class="burger-icon" />
+		</div>
 	</div>
 </nav>
 
@@ -87,5 +89,22 @@
 
 	.menu:hover {
 		color: var(--white);
+	}
+
+	.grd {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		place-items: center;
+		gap: 1rem;
+	}
+
+	button {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.menu {
+		margin: 0px;
+		padding: 0px;	
 	}
 </style>

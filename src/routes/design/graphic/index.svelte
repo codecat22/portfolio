@@ -20,7 +20,7 @@
 		</div>
 	</a>
 	<a href="/design/graphic/icons" class="cover-card">
-		<img class="cover-card-image" src="/images/comingsoon-alt.png" alt="sad person pretending cooking" />
+		<img class="cover-card-image" src="/images/graphic-design/protecto.png" alt="sad person pretending cooking" />
 		<div class="cover-card-caption">
 			<h2 class="cover-card-caption-label">Icons</h2>
 			<div class="cover-card-arrow-container">

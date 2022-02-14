@@ -1,158 +1,160 @@
 <script lang="ts">
 	import ArrowRight from '$components/ArrowRight.svelte';
+
+	const items = [
+		{
+			href: '/design/web',
+			date: 'January Bollocks',
+			title: 'Web Design',
+			abstract: 'Websites, applications'
+		},
+		{
+			href: '/design/graphic',
+			date: 'January Bollocks',
+			title: 'Graphic Design',
+			abstract: 'Logos, icons, and others'
+		},
+		{
+			href: '/design/collaborations',
+			date: 'January Bollocks',
+			title: 'Collaborations',
+			abstract: 'University group projects'
+		},
+		{
+			href: '/design/art',
+			date: 'January Bollocks',
+			title: 'Visual Art',
+			abstract: 'Photos, drawings, videos'
+		}
+	];
 </script>
 
 <h2 class="design-title">Design</h2>
 
-<section class="design-main cover-cards-container">
-	<a href="/design/graphic/logos" class="cover-card">
-		<img
-			class="cover-card-image"
-			src="/images/placeholder-cat.jpg"
-			alt="building through a rainy window"
-		/>
-		<div class="cover-card-caption">
-			<h2 class="cover-card-caption-label">Logos</h2>
-			<div class="cover-card-arrow-container">
-				<ArrowRight class="cover-card-caption-arrow" />
-			</div>
-		</div>
-	</a>
-	<a href="/design/graphic/icons" class="cover-card">
-		<img
-			class="cover-card-image"
-			src="/images/placeholder-cat.jpg"
-			alt="sad person pretending cooking"
-		/>
-		<div class="cover-card-caption">
-			<h2 class="cover-card-caption-label">Icons</h2>
-			<div class="cover-card-arrow-container">
-				<ArrowRight class="cover-card-caption-arrow" />
-			</div>
-		</div>
-	</a>
-	<a href="/design/graphic/others" class="cover-card">
-		<img
-			class="cover-card-image"
-			src="/images/placeholder-cat.jpg"
-			alt="drawn black and white bridge"
-		/>
-		<div class="cover-card-caption">
-			<h2 class="cover-card-caption-label">Others</h2>
-			<div class="cover-card-arrow-container">
-				<ArrowRight class="cover-card-caption-arrow" />
-			</div>
-		</div>
-	</a>
-	<a href="/design/graphic/others" class="cover-card">
-		<img
-			class="cover-card-image"
-			src="/images/placeholder-cat.jpg"
-			alt="drawn black and white bridge"
-		/>
-		<div class="cover-card-caption">
-			<h2 class="cover-card-caption-label">Others</h2>
-			<div class="cover-card-arrow-container">
-				<ArrowRight class="cover-card-caption-arrow" />
-			</div>
-		</div>
-	</a>
+<section class="design-main">
+	<ul>
+		{#each items as item}
+			<a href={item.href}>
+				<!-- <p class="doc-date">{item.date}</p> -->
+				<h3 class="doc-title">{item.title}</h3>
+				<p class="doc-abstract">{item.abstract}</p>
+				<img src="/images/visual-art-cover.png" alt="Visual Art Cover">
+				<div class="arrow-right">
+					<ArrowRight class="arrow-icon" />
+				</div>
+			</a>
+		{/each}
+	</ul>
 </section>
 
 <style>
-	.cover-card:hover .cover-card-caption {
-		min-width: 100%;
+	a:hover {
+		background-color: var(--purple);
+		transition: all ease-in-out 0.2s;
+		transform: scale(1.05);
+		box-shadow: 0px 4px 4px 0px #00000040;
+		z-index: 100;
 	}
 
-	.cover-card:hover .cover-card-arrow-container {
-		opacity: 1;
-		transition: opacity 0.1s linear;
-		transition-delay: 0.3s;
-	}
-
-	.cover-card-arrow-container {
-		opacity: 0;
-		background: var(--purple);
-		margin-left: auto;
+	.arrow-right {
+		width: 5vw;
+		min-width: 2rem;
 		display: grid;
 		place-content: center;
-		flex: 2;
-	}
-
-	:global(.cover-card-caption-arrow) {
-		padding: 0 !important;
-		color: var(--white) !important;
-	}
-
-	.cover-card-caption-label {
-		font-family: 'Lalezar', cursive;
-		color: var(--white);
-		--val: 2vw;
-		flex: 8;
-		margin: 0.5rem;
-		font-weight: 400;
-		display: flex;
-	}
-
-	.cover-card-caption {
+		height: 5vw;
+		min-height: 2rem;
+		transition: all ease-in-out 0.3s;
 		position: absolute;
-		bottom: 15%;
-		left: 0;
-		display: flex;
-		background: var(--black);
-		min-width: 45%;
-		transition: min-width 0.3s linear;
+		bottom: 0;
+		right: 0;
 	}
 
-	.cover-card {
-		box-shadow: 4px 4px 4px 0px rgba(10, 10, 10, 0.5);
-		position: relative;
-		height: min-content;
-		border-top: 5px solid var(--black);
-		display: flex;
-		cursor: pointer;
+	a:hover > .arrow-right {
+		background-color: #574b60;
 	}
 
-	.cover-card-image {
-		max-width: 100%;
-		height: auto;
+	a:hover > .arrow-right > :global(.arrow-icon) {
+		color: var(--white);
 	}
 
-	.cover-cards-container {
+	.doc-abstract {
+		margin-left: 1rem;
+		margin-right: 1rem;
+		font-family: 'Open Sans', sans-serif;
+		margin-bottom: 1rem;
+		/* height: 43%; */
+		--val: 1vw;
+		--min: 0.6rem;
+		color: var(--light-gray);
+	}
+
+	img {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 15%;
+	}
+
+	.doc-title {
+		margin: 1rem;
+		font-family: 'Lalezar', cursive;
+		--val: 1.8vw;
+		transition: all ease-in-out 0.3s;
+		color: var(--white);
+	}
+
+	ul {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		height: 100%;
-		gap: 2rem;
-		padding: 0;
-		align-items: center;
+		--grid-cols: 4;
+		grid-template-columns: repeat(var(--grid-cols), 1fr);
+		align-content: center;
+		justify-items: center;
+		margin-top: 5vw;
+		margin-bottom: 5vw;
+		padding-left: 5vw;
+		padding-right: 5vw;
+		grid-gap: 2vw;
+		align-self: center;
 	}
 
-	@media (max-width: 1200px) {
-		.cover-card-caption-label {
-			font-size: 35px;
-		}
-
-		.cover-cards-container {
-			padding-top: 0;
-			grid-template-columns: 1fr;
-			justify-items: center;
-		}
-
-		.cover-card {
-			max-width: 400px;
+	@media only screen and (max-width: 600px) {
+		ul {
+			--grid-cols: 2;
 		}
 	}
 
-	:global(.menu) {
-		display: none !important;
+	@media only screen and (max-width: 900px) and (min-width: 601px) {
+		ul {
+			--grid-cols: 3;
+		}
+	}
+
+	a {
+		display: flex;
+		flex-direction: column;
+		width: 16vw;
+		min-width: 8rem;
+		height: 24vw;
+		min-height: 12rem;
+		transition: all ease-in-out 0.3s;
+		cursor: pointer;
+		position: relative;
+		padding: 0.3em;
+		text-decoration: none;
+		color: var(--black);
+	}
+
+	h2 {
+		text-align: center;
+		font-weight: 100;
+		--val: 2.2vw;
 	}
 
 	:global(.design-layout-main) {
-		grid-template-columns: 5% 1fr 5%;
-		grid-template-rows: min-content min-content 1fr;
+		grid-template-columns: 10% 1fr 10%;
 	}
 
-	:global(.design-title) {
-		margin: 0 !important;
+	:global(.burger-icon) {
+		display: none;
 	}
 </style>

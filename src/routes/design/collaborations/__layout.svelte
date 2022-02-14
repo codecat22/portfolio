@@ -7,8 +7,8 @@
 <Sidebar
 	links={[
 		{ label: 'Web Design', href: '/design/web' },
-		{ label: 'Visual Art', href: '/design/art' },
-		{ label: 'Graphic Design', href: '/design/graphic' }
+		{ label: 'Graphic Design', href: '/design/graphic' },
+		{ label: 'Visual Art', href: '/design/art' }
 	]}
 />
 
@@ -73,7 +73,6 @@
 		color: var(--white);
 		margin-bottom: 1em;
 	}
-
 
 	:global(.collaboration-authors) {
 		font-family: 'Open Sans', sans-serif;

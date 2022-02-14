@@ -14,19 +14,19 @@
 	</aside>
 	<div class="web-design-description">
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero, possimus consequatur
-			quod ipsa enim odio asperiores iure expedita nam iste harum mollitia illo vero. Voluptates
-			fugit at fuga neque?
+			This was my first project both as a programmer and as a designer. The design of the site is
+			simple, as it was not a big project (or a big company) at the time. It consists of a diverse
+			(if limited) catalogue of products presented in a static website with a gallery, a downloads
+			section, and contact/ order information.
 		</p>
 		<p>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, quas deleniti porro minus
-			provident, adipisci totam voluptatem iure aspernatur soluta doloribus, nihil et dolorum
-			quaerat deserunt. Quas sit eaque tenetur!
+			The company is a distributor for Bulgaria of window frames, doors, outdoor flooring (such as
+			tiles) and other similar items.
 		</p>
 		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, perferendis ipsam
-			numquam, veritatis repudiandae officia vel, magnam non magni expedita sapiente. Incidunt nihil
-			necessitatibus praesentium! Ut sunt amet at assumenda!
+			After two years, the website is not in operation anymore as it does not encompass the
+			company's current expanded catalogue. Instead, a new website (once again using my design) is
+			being developed to replace it.
 		</p>
 	</div>
 </section>

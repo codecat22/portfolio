@@ -14,19 +14,16 @@
 	</aside>
 	<div class="web-design-description">
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero, possimus consequatur
-			quod ipsa enim odio asperiores iure expedita nam iste harum mollitia illo vero. Voluptates
-			fugit at fuga neque?
+			I did this design for a community project with some other Bulgarian students. The idea is to
+			create an application for "neighbourly sharing" where people can find others around them who
+			want to share food, clothing, or anything else, or conversely share something with their
+			neighbours instead. The app is inspired by the concept of on-the-ground mutual aid, and aims
+			to reintroduce (especially in the growing capital city of Sofia) the age-old concept of
+			friendly, neighbourly help.
 		</p>
 		<p>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, quas deleniti porro minus
-			provident, adipisci totam voluptatem iure aspernatur soluta doloribus, nihil et dolorum
-			quaerat deserunt. Quas sit eaque tenetur!
-		</p>
-		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, perferendis ipsam
-			numquam, veritatis repudiandae officia vel, magnam non magni expedita sapiente. Incidunt nihil
-			necessitatibus praesentium! Ut sunt amet at assumenda!
+			The Zeleneya design has now been handed over to the main programmer (who also came up with the
+			idea in the first place), and is currently under development.
 		</p>
 	</div>
 </section>

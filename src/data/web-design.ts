@@ -21,7 +21,7 @@ export default [
 			{ img: '/images/web-design/trebel21-2.PNG', alt: 'trebel map page screenshot' },
 			{ img: '/images/web-design/trebel21-3.PNG', alt: 'trebel history page screenshot' }
 		],
-		subtitle: 'Ongoing since June 2021',
+		subtitle: 'June 2021 - January 2022',
 		description: `An improved version of the Trebel16 website, created to meet the updated needs of the company and its clients now that it has expanded its reach.`
 	},
 	{
@@ -42,11 +42,12 @@ export default [
 	{
 		title: 'Zeleneya desktop',
 		href: '/design/web/zeleneya-desktop',
-		img: '/images/placeholder-cat.jpg',
+		img: '/images/web-design/zeleneya-desktop.png',
 		alt: 'Zeleneya desktop screenshot',
 		pageImages: [
-			{ img: '[placeholder]', alt: 'A cat' },
-			{ img: '[placeholder]', alt: 'A cat' }
+			{ img: '/images/web-design/zeleneya-desktop.png', alt: 'Zeleneya screenshot' },
+			{ img: '/images/web-design/zeleneya-desktop-2.png', alt: 'Zeleneya screenshot' },
+			{ img: '/images/web-design/zeleneya-desktop-3.png', alt: 'Zeleneya screenshot' }
 		],
 		subtitle: 'August 2021 - October 2021',
 		description: `Desktop version of the “neighbourly sharing” app Zeleneya, currently in development by a Bulgarian team for a local audience, aiming to bring back and make easy the practice of gifting and reusing old items instead of throwing them away.`
@@ -61,7 +62,10 @@ export default [
 				img: '/images/web-design/trebel16-2019.PNG',
 				alt: 'main page of trebel16 website, 2019 version'
 			},
-			{ img: '/images/web-design/trebel16-2.png', alt: 'brochure page of trebel16 website, 2019 version' },
+			{
+				img: '/images/web-design/trebel16-2.png',
+				alt: 'brochure page of trebel16 website, 2019 version'
+			}
 		],
 		subtitle: 'June 2019 - December 2019',
 		description: `A catalogue website showing off the products offered by Trebel16 (a company which sells window frames, joinery, doors, facings, and other similar items) and providing contact and booking information to the customer. `

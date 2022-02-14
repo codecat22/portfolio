@@ -39,14 +39,20 @@ export default [
 		date: 'October 2020',
 		title: 'Cloud Connected',
 		abstract:
-			'A workbook presenting a design concept for a productivity system centered around a smart desktop lamp called "The Cloud."'
+			'A workbook presenting the design concept for a productivity system centered around a smart desktop lamp called "The Cloud." The system utilizes various interactions to help create a more efficient, less stressful home workspace.'
+	},
+	{
+		name: 'SustainabilitySeminarEssay',
+		date: 'November 2021',
+		title: 'Essay: Climate Lollygagging',
+		abstract: 'A short essay for a seminar assignment discussing sustainability and climate issues.'
 	},
 	{
 		name: 'StandingOnYourFeetDesignDiary',
 		date: 'September 2021',
 		title: 'Standing On Your Feet Design Diary',
 		abstract:
-			'A design diary about the process of creating the elevator concept in the Standing On Your Feet project.'
+			'A design diary about the process of creating the elevator concept in the Standing On Your Feet project. Contains various artifacts of that process (such as art and body maps) and reflections on the steps to the final result.'
 	},
 	{
 		name: 'StyleTransferMLW',
@@ -62,19 +68,18 @@ export default [
 		abstract:
 			'In this project, our goal was to observe the prevalence of transphobic content online, while also applying natural language processing methods to classify a specific “subgenre” of hate speech in practice.'
 	},
-  {
+	{
 		name: 'ScienceEducation',
 		date: 'December 2020',
 		title: 'Science Education vs Learning Science',
 		abstract:
 			'A short essay discussing the flaws and pitfalls of contemporary education in the sciences and how the experience of students could improve.'
 	},
-  {
+	{
 		name: 'YunakDemoScript',
 		date: 'May 2021',
 		title: 'Script for the Yunak game demo',
 		abstract:
 			'A draft of the script to a story=based puzzle game based around Bulgarian mythology - Yunak.'
-	},
-  
+	}
 ];

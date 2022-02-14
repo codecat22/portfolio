@@ -14,19 +14,22 @@
 	</aside>
 	<div class="web-design-description">
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero, possimus consequatur
-			quod ipsa enim odio asperiores iure expedita nam iste harum mollitia illo vero. Voluptates
-			fugit at fuga neque?
+			I returned to Trebel in 2021 to design an updated version of their website after the company
+			expanded its reach. My responsibilities included UI/UX design, branding, web/ graphic design
+			of the new site, and some copywriting.
 		</p>
 		<p>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, quas deleniti porro minus
-			provident, adipisci totam voluptatem iure aspernatur soluta doloribus, nihil et dolorum
-			quaerat deserunt. Quas sit eaque tenetur!
+			There were a lot of changes implemented in the reworking of the Trebel16 design. The website
+			became much larger and more complex, including a variety of new sections and elements. I
+			worked closely with the programmer who is building the website (a process that is still
+			ongoing).
 		</p>
 		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, perferendis ipsam
-			numquam, veritatis repudiandae officia vel, magnam non magni expedita sapiente. Incidunt nihil
-			necessitatibus praesentium! Ut sunt amet at assumenda!
+			Challenges of a commercial website include the need to present the company's catalogue, which
+			comes in many different forms such as photos, downloadable files, and video materials, in a
+			clear and compelling way. It is also important to maintain a consistent and distinct feel/
+			branding throughout.
 		</p>
+		<p>The company is planning to launch the new website later in 2022.</p>
 	</div>
 </section>

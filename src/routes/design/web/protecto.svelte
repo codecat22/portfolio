@@ -14,19 +14,20 @@
 	</aside>
 	<div class="web-design-description">
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero, possimus consequatur
-			quod ipsa enim odio asperiores iure expedita nam iste harum mollitia illo vero. Voluptates
-			fugit at fuga neque?
+			In this project, I designed a full website for an innovative security product pending patent.
+			Tasks included UI/UX design, graphic design e.g. icons, branding, web design. I worked closely
+			with a programmer who was implementing the design and provided assistance with CSS.
 		</p>
 		<p>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, quas deleniti porro minus
-			provident, adipisci totam voluptatem iure aspernatur soluta doloribus, nihil et dolorum
-			quaerat deserunt. Quas sit eaque tenetur!
+			The main goal of the product is for the user to be able to securely store and share personal
+			files such as documents, photos, or audio. The unique feature of this project (not shown in
+			the example pictures due to its proprietary nature) is a complex login form with a highly
+			personalised visual key.
 		</p>
 		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, perferendis ipsam
-			numquam, veritatis repudiandae officia vel, magnam non magni expedita sapiente. Incidunt nihil
-			necessitatibus praesentium! Ut sunt amet at assumenda!
+			This design was highly guided by the client's requirements at every step, although there was
+			some space for creativity when designing some parts of the layout, the icons, and other
+			graphical elements.
 		</p>
 	</div>
 </section>

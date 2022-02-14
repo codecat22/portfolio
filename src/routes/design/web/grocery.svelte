@@ -14,19 +14,15 @@
 	</aside>
 	<div class="web-design-description">
 		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas libero, possimus consequatur
-			quod ipsa enim odio asperiores iure expedita nam iste harum mollitia illo vero. Voluptates
-			fugit at fuga neque?
+			This is a little personal project I'm working on with my spouse. We are making an app that
+			organises all shopping lists into one convenient place. It also holds a list of stores with
+			map locations, reminders for various activities, and even the ability to indicate if something
+			is currently in stock at home.
 		</p>
 		<p>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti, quas deleniti porro minus
-			provident, adipisci totam voluptatem iure aspernatur soluta doloribus, nihil et dolorum
-			quaerat deserunt. Quas sit eaque tenetur!
+			While this is not a particularly groundbreaking or interesting idea, I believe it is going to
+			be very useful - at least to us - in everyday, mundane shopping experiences.
 		</p>
-		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, perferendis ipsam
-			numquam, veritatis repudiandae officia vel, magnam non magni expedita sapiente. Incidunt nihil
-			necessitatibus praesentium! Ut sunt amet at assumenda!
-		</p>
+		<p>Never forget to buy oat milk again! :)</p>
 	</div>
 </section>

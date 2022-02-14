@@ -3,6 +3,7 @@
 </script>
 
 <slot />
+<Sidebar />
 
 <style>
 	:global(.web-design-image) {
@@ -32,7 +33,7 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-        gap: 1em;
+		gap: 1em;
 	}
 
 	:global(.web-design-description) {
@@ -66,7 +67,6 @@
 		color: var(--white);
 		margin-bottom: 1em;
 	}
-
 
 	:global(.web-design-authors) {
 		font-family: 'Open Sans', sans-serif;

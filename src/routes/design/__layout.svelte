@@ -1,14 +1,17 @@
 <script lang="ts">
 	import Contact from '$components/Contact.svelte';
 	import Nav from '$components/NavDark.svelte';
-import Sidebar from '$components/Sidebar.svelte';
+	import Sidebar from '$components/Sidebar.svelte';
 	import sidebar from '$stores/sidebar';
+	import { page } from '$app/stores';
 
 	let clientWidth = Infinity;
 
 	const handleMenuClick = () => {
 		sidebar.update((s) => !s);
 	};
+
+	$: showSidebar = $page.path.includes('/design/');
 </script>
 
 <svelte:window bind:innerWidth={clientWidth} />
@@ -17,7 +20,9 @@ import Sidebar from '$components/Sidebar.svelte';
 	<Nav class="top-nav" on:menu-click={handleMenuClick} />
 	<slot />
 	<Contact />
-	<Sidebar />
+	{#if showSidebar}
+		<Sidebar />
+	{/if}
 </main>
 
 <style>

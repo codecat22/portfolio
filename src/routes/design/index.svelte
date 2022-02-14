@@ -5,23 +5,31 @@
 		{
 			href: '/design/web',
 			date: 'January Bollocks',
+			src: '/images/web-design-cover.png',
+			alt: 'Web Design Cover',
 			title: 'Web Design',
 			abstract: 'Websites, applications'
 		},
 		{
 			href: '/design/graphic',
+			src: '/images/graphic-design-cover.png',
+			alt: 'Graphic Design Cover',
 			date: 'January Bollocks',
 			title: 'Graphic Design',
 			abstract: 'Logos, icons, and others'
 		},
 		{
 			href: '/design/collaborations',
+			src: '/images/collaborations-cover.png',
+			alt: 'Collaborations Cover',
 			date: 'January Bollocks',
 			title: 'Collaborations',
 			abstract: 'University group projects'
 		},
 		{
 			href: '/design/art',
+			src: '/images/visual-art-cover.png',
+			alt: 'Visual Art Cover',
 			date: 'January Bollocks',
 			title: 'Visual Art',
 			abstract: 'Photos, drawings, videos'
@@ -35,10 +43,9 @@
 	<ul>
 		{#each items as item}
 			<a href={item.href}>
-				<!-- <p class="doc-date">{item.date}</p> -->
 				<h3 class="doc-title">{item.title}</h3>
 				<p class="doc-abstract">{item.abstract}</p>
-				<img src="/images/visual-art-cover.png" alt="Visual Art Cover">
+				<img src={item.src} alt={item.alt} />
 				<div class="arrow-right">
 					<ArrowRight class="arrow-icon" />
 				</div>
@@ -48,12 +55,17 @@
 </section>
 
 <style>
+	:global(.arrow-icon) {
+		transform: scale(2);
+	}
+
 	a:hover {
 		background-color: var(--purple);
 		transition: all ease-in-out 0.2s;
 		transform: scale(1.05);
 		box-shadow: 0px 4px 4px 0px #00000040;
 		z-index: 100;
+		border: none;
 	}
 
 	.arrow-right {
@@ -89,10 +101,11 @@
 	}
 
 	img {
-		width: 80%;
+		max-width: 80%;
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 15%;
+		max-height: 10rem;
 	}
 
 	.doc-title {
@@ -142,6 +155,8 @@
 		padding: 0.3em;
 		text-decoration: none;
 		color: var(--black);
+		border: 1px solid var(--black);
+		border-radius: 10px;
 	}
 
 	h2 {
@@ -152,9 +167,5 @@
 
 	:global(.design-layout-main) {
 		grid-template-columns: 10% 1fr 10%;
-	}
-
-	:global(.burger-icon) {
-		display: none;
 	}
 </style>

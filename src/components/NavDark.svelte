@@ -10,6 +10,7 @@
 	import contact from '$stores/contact';
 
 	$: isSubPage = $page.path.split('/').length >= 4;
+	$: hideMenuButton = $page.path === '/design';
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -22,9 +23,11 @@
 	>
 	<div class="right-item grd">
 		<button><ContactButton on:click={() => contact.set(true)} /></button>
-		<div class="menu" on:click={() => dispatch('menu-click')}>
-			<BurgerIcon class="burger-icon" />
-		</div>
+		{#if !hideMenuButton}
+			<div class="menu" on:click={() => dispatch('menu-click')}>
+				<BurgerIcon class="burger-icon" />
+			</div>
+		{/if}
 	</div>
 </nav>
 
@@ -102,9 +105,9 @@
 		margin: 0px;
 		padding: 0px;
 	}
-	
+
 	.menu {
 		margin: 0px;
-		padding: 0px;	
+		padding: 0px;
 	}
 </style>

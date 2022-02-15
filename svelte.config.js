@@ -10,8 +10,8 @@ const config = {
 		adapter: adapter(),
 		vite: {
 			plugins: [imagetools()]
-		}
-	}
+		},
+	},
 };
 
 export default config;

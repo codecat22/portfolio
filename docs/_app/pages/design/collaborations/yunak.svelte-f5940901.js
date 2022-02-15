@@ -1,0 +1,25 @@
+import{S as nt,i as ot,s as st,e as n,t as o,k as T,c as s,a as i,h as l,d as a,m as Y,b as e,$ as lt,g as Q,H as t,L as R}from"../../../chunks/vendor-7d44de4f.js";import{c as it}from"../../../chunks/collaborations-618a741e.js";function ct(f){let c,I,_,h,m,y,U,S,E,C,G,d,D,H,j,B,$,q,r,x,g,L,M,v,N,O,k,V,F,b,J,K;return{c(){c=n("h2"),I=o(f[3]),_=T(),h=n("section"),m=n("aside"),y=n("img"),S=T(),E=n("p"),C=o(f[1]),G=T(),d=n("div"),D=n("p"),H=o(`Yunak is a 2D puzzle game demo based on Bulgarian folk tales, created for the Computer Game\r
+			Design course. The demo consists of snakes-and-ladders style puzzles and multipath dialogue\r
+			scenes, introducing the player to various folklore creatures and leading to one of three\r
+			possible endings.`),j=T(),B=n("p"),$=o(`Yunak (which means \u201CHero\u201D in Bulgarian) is targeted at people who love puzzle games,\r
+			interactive fiction, story-centric games, and single-player gaming experiences. The story,\r
+			central to the game\u2019s concept, revolves around the Bulgarian folk tale trope of \u201Ctravelling\r
+			through nine mountains to a tenth\u201D to achieve a goal or fulfill a purpose. In each \u201Cmountain\u201D\r
+			the player meets the beings that inhabit the Balkan folkloric imagination.`),q=T(),r=n("p"),x=o("In this project, I was responsible for creating the characters, the story, the "),g=n("a"),L=o("script"),M=o(`\r
+			for the demo including a limited soundtrack, and a\r
+			`),v=n("a"),N=o("reference encyclopedia"),O=o(`\r
+			for the monsters, people, and items involved in the narrative. The full demo can be found at\r
+			`),k=n("a"),V=o("yunakteam.itch.io/yunak"),F=o(`, and a documentation of the creative process for the story and characters is available\r
+			`),b=n("a"),J=o("here"),K=o("."),this.h()},l(u){c=s(u,"H2",{class:!0});var w=i(c);I=l(w,f[3]),w.forEach(a),_=Y(u),h=s(u,"SECTION",{class:!0});var A=i(h);m=s(A,"ASIDE",{class:!0});var P=i(m);y=s(P,"IMG",{class:!0,src:!0,alt:!0}),S=Y(P),E=s(P,"P",{class:!0});var W=i(E);C=l(W,f[1]),W.forEach(a),P.forEach(a),G=Y(A),d=s(A,"DIV",{class:!0});var z=i(d);D=s(z,"P",{});var X=i(D);H=l(X,`Yunak is a 2D puzzle game demo based on Bulgarian folk tales, created for the Computer Game\r
+			Design course. The demo consists of snakes-and-ladders style puzzles and multipath dialogue\r
+			scenes, introducing the player to various folklore creatures and leading to one of three\r
+			possible endings.`),X.forEach(a),j=Y(z),B=s(z,"P",{});var Z=i(B);$=l(Z,`Yunak (which means \u201CHero\u201D in Bulgarian) is targeted at people who love puzzle games,\r
+			interactive fiction, story-centric games, and single-player gaming experiences. The story,\r
+			central to the game\u2019s concept, revolves around the Bulgarian folk tale trope of \u201Ctravelling\r
+			through nine mountains to a tenth\u201D to achieve a goal or fulfill a purpose. In each \u201Cmountain\u201D\r
+			the player meets the beings that inhabit the Balkan folkloric imagination.`),Z.forEach(a),q=Y(z),r=s(z,"P",{});var p=i(r);x=l(p,"In this project, I was responsible for creating the characters, the story, the "),g=s(p,"A",{target:!0,href:!0,class:!0});var tt=i(g);L=l(tt,"script"),tt.forEach(a),M=l(p,`\r
+			for the demo including a limited soundtrack, and a\r
+			`),v=s(p,"A",{target:!0,href:!0,class:!0});var et=i(v);N=l(et,"reference encyclopedia"),et.forEach(a),O=l(p,`\r
+			for the monsters, people, and items involved in the narrative. The full demo can be found at\r
+			`),k=s(p,"A",{target:!0,href:!0,class:!0});var at=i(k);V=l(at,"yunakteam.itch.io/yunak"),at.forEach(a),F=l(p,`, and a documentation of the creative process for the story and characters is available\r
+			`),b=s(p,"A",{target:!0,href:!0,class:!0});var rt=i(b);J=l(rt,"here"),rt.forEach(a),K=l(p,"."),p.forEach(a),z.forEach(a),A.forEach(a),this.h()},h(){e(c,"class","design-title"),e(y,"class","collaboration-image"),lt(y.src,U="/images/collaborations/"+f[0])||e(y,"src",U),e(y,"alt",f[2]),e(E,"class","collaboration-authors"),e(m,"class","collaboration-aside"),e(g,"target","blank"),e(g,"href","/data/papers/YunakDemoScript.pdf"),e(g,"class","collaboration-file-link"),e(v,"target","blank"),e(v,"href","https://www.worldanvil.com/w/planina-merecat/c/world-encyclopedia-category"),e(v,"class","collaboration-file-link"),e(k,"target","blank"),e(k,"href","https://yunakteam.itch.io/yunak"),e(k,"class","collaboration-file-link"),e(b,"target","blank"),e(b,"href","/data/collaborations/cloud/Project_Yunak_GDD.pdf"),e(b,"class","collaboration-file-link"),e(d,"class","collaboration-description"),e(h,"class","design-main collaboration-content")},m(u,w){Q(u,c,w),t(c,I),Q(u,_,w),Q(u,h,w),t(h,m),t(m,y),t(m,S),t(m,E),t(E,C),t(h,G),t(h,d),t(d,D),t(D,H),t(d,j),t(d,B),t(B,$),t(d,q),t(d,r),t(r,x),t(r,g),t(g,L),t(r,M),t(r,v),t(v,N),t(r,O),t(r,k),t(k,V),t(r,F),t(r,b),t(b,J),t(r,K)},p:R,i:R,o:R,d(u){u&&a(c),u&&a(_),u&&a(h)}}}function ht(f){const{img:c,authors:I,alt:_,title:h}=it.yunak;return[c,I,_,h]}class pt extends nt{constructor(c){super();ot(this,c,ht,ct,st,{})}}export{pt as default};

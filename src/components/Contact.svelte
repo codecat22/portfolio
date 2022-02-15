@@ -3,7 +3,7 @@
 	import contact from '../stores/contact';
 </script>
 
-<div class:move-up={$contact}>
+<div style="height: {!$contact ? '0%' : '100%'}">
 	<p><b>Email</b></p>
 	<p>siyana.ivanova13@gmail.com</p>
 	<p>siyanai@kth.se</p>
@@ -23,11 +23,6 @@
 </div>
 
 <style>
-	.move-up {
-		transform: translateY(0%);
-		transition: transform 0.5s ease-in;
-	}
-
 	a {
 		text-decoration: none;
 		color: #7d8491;
@@ -40,19 +35,20 @@
 	}
 
 	div {
-		min-height: 100vh;
+		height: 0%;
 		display: flex;
-		position: relative;
 		flex-direction: column;
 		background-color: var(--white);
 		color: var(--black);
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		transform: translateY(-100%);
-		position: absolute;
-		transition: transform 0.5s ease-in;
+		position: fixed;
+		transition: all 0.5s ease-in;
 		z-index: 101;
+		overflow-y: hidden;
+		top: 0;
+		left: 0;
 	}
 
 	p {

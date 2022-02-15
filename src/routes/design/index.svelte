@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ArrowRight from '$components/ArrowRight.svelte';
+	import ArrowRight from '../../components/ArrowRight.svelte';
 
 	const items = [
 		{
@@ -55,10 +55,6 @@
 </section>
 
 <style>
-	:global(.arrow-icon) {
-		transform: scale(2);
-	}
-
 	a:hover {
 		background-color: var(--purple);
 		transition: all ease-in-out 0.2s;
@@ -76,9 +72,9 @@
 		height: 5vw;
 		min-height: 2rem;
 		transition: all ease-in-out 0.3s;
-		position: absolute;
-		bottom: 0;
-		right: 0;
+		margin-top: auto;
+		margin-left: auto;
+		padding: 0;
 	}
 
 	a:hover > .arrow-right {
@@ -94,18 +90,16 @@
 		margin-right: 1rem;
 		font-family: 'Open Sans', sans-serif;
 		margin-bottom: 1rem;
-		/* height: 43%; */
 		--val: 1vw;
 		--min: 0.6rem;
 		color: var(--light-gray);
 	}
 
 	img {
-		max-width: 80%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 15%;
-		max-height: 10rem;
+		max-width: 100%;
+		height: auto;
+		margin: auto;
+		padding: 1em;
 	}
 
 	.doc-title {
@@ -124,35 +118,36 @@
 		justify-items: center;
 		margin-top: 5vw;
 		margin-bottom: 5vw;
-		padding-left: 5vw;
-		padding-right: 5vw;
-		grid-gap: 2vw;
+		padding-left: 3vw;
+		padding-right: 3vw;
+		gap: 1vw;
 		align-self: center;
+		grid-auto-rows: 1fr;
 	}
 
 	@media only screen and (max-width: 600px) {
 		ul {
-			--grid-cols: 2;
+			--grid-cols: 1;
+		}
+
+		a {
+			margin-bottom: 1.2rem;
 		}
 	}
 
 	@media only screen and (max-width: 900px) and (min-width: 601px) {
 		ul {
-			--grid-cols: 3;
+			--grid-cols: 2;
 		}
 	}
 
 	a {
 		display: flex;
 		flex-direction: column;
-		width: 16vw;
-		min-width: 8rem;
-		height: 24vw;
-		min-height: 12rem;
 		transition: all ease-in-out 0.3s;
 		cursor: pointer;
 		position: relative;
-		padding: 0.3em;
+		padding: 0.3em 0 0 0.3em;
 		text-decoration: none;
 		color: var(--black);
 		border: 1px solid var(--black);
@@ -166,6 +161,6 @@
 	}
 
 	:global(.design-layout-main) {
-		grid-template-columns: 10% 1fr 10%;
+		grid-template-columns: 10% 1fr 10% !important;
 	}
 </style>

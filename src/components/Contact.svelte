@@ -1,6 +1,6 @@
 <script>
 	import BackButton from '../components/BackButton.svelte';
-	import contact from "$stores/contact";
+	import contact from '../stores/contact';
 </script>
 
 <div class:move-up={$contact}>
@@ -17,7 +17,7 @@
 	<br />
 
 	<p><b>Resume</b></p>
-	<p>Download <a href="/static/data/contact/Resume2022.pdf" target="blank">here</a></p>
+	<p>Download <a href="/data/contact/Resume2022.pdf" target="blank">here</a></p>
 
 	<BackButton class="back-button" on:click={() => contact.set(false)} />
 </div>

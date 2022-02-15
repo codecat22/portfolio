@@ -1,5 +1,5 @@
 <script lang="ts">
-	import collaborations from '$data/collaborations';
+	import collaborations from '../../../data/collaborations';
 	const { img, authors, alt, title } = collaborations.yunak;
 </script>
 
@@ -27,7 +27,7 @@
 		<p>
 			In this project, I was responsible for creating the characters, the story, the <a
 				target="blank"
-				href="/static/data/papers/YunakDemoScript.pdf"
+				href="/data/papers/YunakDemoScript.pdf"
 				class="collaboration-file-link">script</a
 			>
 			for the demo including a limited soundtrack, and a
@@ -42,7 +42,7 @@
 			>, and a documentation of the creative process for the story and characters is available
 			<a
 				target="blank"
-				href="/static/data/collaborations/cloud/Project_Yunak_GDD.pdf"
+				href="/data/collaborations/cloud/Project_Yunak_GDD.pdf"
 				class="collaboration-file-link">here</a
 			>.
 		</p>

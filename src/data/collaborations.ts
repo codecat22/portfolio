@@ -8,7 +8,7 @@ export default {
 			'The Cloud is a productivity and life-balance aid we designed as part of the Media Technology and Interaction Design course. It alters the ambiance of a room in accordance with one’s schedule, and so facilitates healthy routines during lockdown.'
 	},
 	map: {
-		img: 'map.png',
+		img: 'map.PNG',
 		alt: 'character paths meet a Rivendell on a map of Middle Earth',
 		authors: 'Felix Gudéhn | Hugo Heyman | Siyana Ivanova | Anders Steen | Liang-Yu',
 		title: 'There and Back Again',
@@ -16,7 +16,7 @@ export default {
 			'This project is a comprehensive, interactable, customizable Lord of the Rings map and timeline, which shows the journey of each member the Fellowship of the Ring throughout the trilogy. It was created for the Information Visualization course. Among the most labour-intensive of the projects I’ve worked on, it required manual data collection from all three books. '
 	},
 	yunak: {
-		img: 'yunak.png',
+		img: 'yunak.PNG',
 		alt: 'Yunak game logo featuring a dragon',
 		authors: 'Xuehua Fu | Siyana Ivanova | Tomass Wilson | Roni Kaufman | Ryan Yared',
 		title: 'Yunak Game',
@@ -24,7 +24,7 @@ export default {
 			'Yunak is a 2D puzzle game demo based on Bulgarian folk tales, created for the Computer Game Design course. The demo consists of snakes-and-ladders style puzzles and multipath dialogue scenes, introducing the player to various folklore creatures and leading to one of three possible endings.'
 	},
 	elevator: {
-		img: 'elevator.png',
+		img: 'elevator.PNG',
 		alt: 'cartoon elevator opening its doors',
 		authors: 'Linnea Bonnevier | Siyana Ivanova | Ramtin Erfani Torbaghani | Jiatong Zhong',
 		title: 'Standing on Your Feet',
@@ -32,7 +32,7 @@ export default {
 			'In this project we used Soma Design to create an elevator prototype for the Interaction Design as a Reflective Practice course, based on a brief provided by ManyOne. Soma Design practices focus on subjective bodily experiences and movements and the feelings and meaning they evoke or create; in our project, we focused on the somatic experience in the feet.'
 	},
 	robot: {
-		img: 'robot.png',
+		img: 'robot.PNG',
 		alt: 'digital furhat robot face',
 		authors: 'Ioana Cotutiu | August Heddini | Sophia Hettich | Siyana Ivanova',
 		title: 'Furhat Culinary Instructor',
@@ -40,7 +40,7 @@ export default {
 			'Using the robot Furhat, we created an interactive cooking assistant/ instructor for beginner home cooks. Furhat walks users through recipes, allowing them to ask questions and revisit steps along the way.'
 	},
 	transfer: {
-		img: 'transfer.png',
+		img: 'transfer.PNG',
 		alt: 'stylized photo of horses in a field',
 		authors: 'Hope Blaszkowska | Siyana Ivanova | Marin Karamihalev | Jae Sun Lee | Rafal Ziomek',
 		title: 'Style Transfer from Artworks to Photographs',

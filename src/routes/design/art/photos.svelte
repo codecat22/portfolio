@@ -1,9 +1,11 @@
 <script lang="ts">
-	import FilterBar from '$components/FilterBar.svelte';
-	import { makeTagsFromUrls } from '$utils/index';
-	const photosImport = import.meta.glob('/static/images/art/photos/**/*.{jpg,JPG}');
+	import FilterBar from '../../../components/FilterBar.svelte';
+	import { makeTagsFromUrls } from '../../../utils/index';
+	import images from '../../../data/images';
 
-	const allPhotoUrls = Object.keys(photosImport);
+	// const photosImport = import.meta.glob('images/art/photos/**/*.{jpg,JPG,png,PNG}');
+
+	const allPhotoUrls = images.photos;
 	const tags = makeTagsFromUrls(allPhotoUrls);
 
 	let filter: FilterOptions = 'featured';

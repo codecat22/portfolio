@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ArrowRight from '$components/ArrowRight.svelte';
-	import Sidebar from '$components/Sidebar.svelte';
+	import ArrowRight from '../../../components/ArrowRight.svelte';
+	import Sidebar from '../../../components/Sidebar.svelte';
 </script>
 
 <h2 class="design-title">Graphic Design</h2>
@@ -20,7 +20,11 @@
 		</div>
 	</a>
 	<a href="/design/graphic/icons" class="cover-card">
-		<img class="cover-card-image" src="/images/graphic-design/protecto.png" alt="sad person pretending cooking" />
+		<img
+			class="cover-card-image"
+			src="/images/graphic-design/protecto.png"
+			alt="sad person pretending cooking"
+		/>
 		<div class="cover-card-caption">
 			<h2 class="cover-card-caption-label">Icons</h2>
 			<div class="cover-card-arrow-container">
@@ -29,7 +33,11 @@
 		</div>
 	</a>
 	<a href="/design/graphic/others" class="cover-card">
-		<img class="cover-card-image" src="/images/comingsoon-alt.png" alt="drawn black and white bridge" />
+		<img
+			class="cover-card-image"
+			src="/images/comingsoon-alt.png"
+			alt="drawn black and white bridge"
+		/>
 		<div class="cover-card-caption">
 			<h2 class="cover-card-caption-label">Others</h2>
 			<div class="cover-card-arrow-container">
@@ -39,22 +47,9 @@
 	</a>
 </section>
 
-<Sidebar
-	links={[
-		{ label: 'Web Design', href: '/design/web' },
-		{ label: 'Collab', href: '/design/collaborations' },
-		{ label: 'Visual Art', href: '/design/art' }
-	]}
-/>
+<Sidebar />
 
 <style>
-	h1 {
-		color: var(--white);
-		display: grid;
-		place-content: center;
-		height: 60%;
-	}
-
 	.cover-card:hover .cover-card-caption {
 		min-width: 100%;
 	}

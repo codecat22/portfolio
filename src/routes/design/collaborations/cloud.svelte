@@ -1,5 +1,5 @@
 <script lang="ts">
-	import collaborations from '$data/collaborations';
+	import collaborations from '../../../data/collaborations';
 	const { img, authors, alt, title } = collaborations.cloud;
 </script>
 
@@ -7,11 +7,7 @@
 
 <section class="design-main collaboration-content">
 	<aside class="collaboration-aside">
-		<img
-			class="collaboration-image"
-			src="/images/collaborations/{img}"
-			alt={alt}
-		/>
+		<img class="collaboration-image" src="/images/collaborations/{img}" {alt} />
 		<p class="collaboration-authors">{authors}</p>
 	</aside>
 	<div class="collaboration-description">
@@ -32,7 +28,7 @@
 			“Cloud Connected” was the first larger project I worked on at KTH. It was developed in
 			accordance with the Double Diamond model, resulting in a prototype and a <a
 				target="blank"
-				href="/static/data/collaborations/cloud/Workbook.pdf"
+				href="/data/collaborations/cloud/Workbook.pdf"
 				class="collaboration-file-link">workbook</a
 			>. Work on The Cloud involved user research, focus and brainstorming sessions, sketching and
 			prototyping, and finally, presenting a finished design.

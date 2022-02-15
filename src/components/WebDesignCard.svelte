@@ -15,7 +15,6 @@
 
 	onMount(() => {
 		if (position === 'middle') self.scrollIntoView(false);
-		console.log('AM MOUNTED', card.title);
 	});
 </script>
 

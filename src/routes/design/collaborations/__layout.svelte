@@ -1,16 +1,10 @@
 <script>
-	import Sidebar from '$components/Sidebar.svelte';
+	import Sidebar from '../../../components/Sidebar.svelte';
 </script>
 
 <slot />
 
-<Sidebar
-	links={[
-		{ label: 'Web Design', href: '/design/web' },
-		{ label: 'Graphic Design', href: '/design/graphic' },
-		{ label: 'Visual Art', href: '/design/art' }
-	]}
-/>
+<Sidebar />
 
 <style>
 	:global(.collaboration-image) {

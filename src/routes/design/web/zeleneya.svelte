@@ -1,5 +1,5 @@
 <script lang="ts">
-	import data from '$data/web-design';
+	import data from '../../../data/web-design';
 	import placeholder from '../../../actions/placeholder';
 	const { pageImages, title } = data.find((t) => t.title === 'Zeleneya mobile');
 </script>

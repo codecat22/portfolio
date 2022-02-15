@@ -1,5 +1,5 @@
 <script lang="ts">
-	import collaborations from '$data/collaborations';
+	import collaborations from '../../../data/collaborations';
 	const { img, authors, alt, title } = collaborations.map;
 </script>
 
@@ -34,7 +34,7 @@
 			>, while the dataset can be viewed
 			<a
 				target="blank"
-				href="/static/data/collaborations/cloud/LotR-Timeline.pdf"
+				href="/data/collaborations/cloud/LotR-Timeline.pdf"
 				class="collaboration-file-link">here</a
 			>.
 		</p>

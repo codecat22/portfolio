@@ -1,23 +1,25 @@
 <script lang="ts">
-	import FilterBar from '$components/FilterBar.svelte';
-	import { makeTagsFromUrls } from '$utils/index';
-	const galleryImport = import.meta.glob('/static/images/art/gallery/**/*.{jpg,JPG}');
+	import FilterBar from '../../../components/FilterBar.svelte';
+	import { makeTagsFromUrls } from '../../../utils/index';
+	import images from '../../../data/images';
+
+	// const galleryImport = import.meta.glob('images/art/gallery/**/*.{jpg,JPG,png,PNG}');
 	const names = [
-		"Bridge at night",
-		"Rila",
-		"Raleigh",
-		"Teatime",
-		"Sofia night",
-		"The eyeball zone",
-		"Identity",
-		"Spring in Sofia",
-		"Country house",
-		"Alexander Nevsky",
-	]
+		'Bridge at night',
+		'Rila',
+		'Raleigh',
+		'Teatime',
+		'Sofia night',
+		'The eyeball zone',
+		'Identity',
+		'Spring in Sofia',
+		'Country house',
+		'Alexander Nevsky'
+	];
 
 	const getNum = (url: string): number => parseInt(url.split('/').pop().split(',')[0].trim());
 
-	const allGalleryUrls = Object.keys(galleryImport);
+	const allGalleryUrls = images['art-gallery'];
 	allGalleryUrls.sort((a, b) => (getNum(a) > getNum(b) ? 1 : -1));
 	const tags = makeTagsFromUrls(allGalleryUrls);
 
@@ -42,7 +44,7 @@
 		{#each galleryUrls as href, i}
 			<div class="art-card card-{getNum(href)}">
 				<img class="art" src={href} loading="lazy" alt={extractNameFromUrl(href)} />
-				<p class="art-description">{names[i] || "A pretty"}</p>
+				<p class="art-description">{names[i] || 'A pretty'}</p>
 			</div>
 		{/each}
 	</div>

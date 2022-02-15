@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ArrowRight from '$components/ArrowRight.svelte';
-	import Sidebar from '$components/Sidebar.svelte';
+	import ArrowRight from '../../../components/ArrowRight.svelte';
+	import Sidebar from '../../../components/Sidebar.svelte';
 </script>
 
 <h2 class="design-title">Visual Art</h2>
@@ -47,13 +47,7 @@
 	</a>
 </section>
 
-<Sidebar
-	links={[
-		{ label: 'Web Design', href: '/design/web' },
-		{ label: 'Collab', href: '/design/collaborations' },
-		{ label: 'Graphic Design', href: '/design/graphic' }
-	]}
-/>
+<Sidebar />
 
 <style>
 	.cover-card:hover .cover-card-caption {
@@ -121,7 +115,7 @@
 		gap: 2rem;
 		padding: 4rem 0.5rem;
 	}
-	
+
 	@media (max-width: 1200px) {
 		.cover-card-caption-label {
 			font-size: 35px;

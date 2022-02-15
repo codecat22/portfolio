@@ -1,0 +1,1 @@
+const a=()=>/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),s=i=>[...new Set(i.map(t=>t.split("/").pop().split(".")[0].split(",").filter(e=>isNaN(parseInt(e))).map(e=>e.trim())).flat(1))];export{a as d,s as m};

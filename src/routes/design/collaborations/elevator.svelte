@@ -1,5 +1,5 @@
 <script lang="ts">
-	import collaborations from '$data/collaborations';
+	import collaborations from '../../../data/collaborations';
 	const { img, authors, alt, title } = collaborations.elevator;
 </script>
 
@@ -29,7 +29,7 @@
 			A documentation of the process that led us to our final design and a detailed description of
 			the prototype can be found in the <a
 				target="blank"
-				href="/static/data/papers/StandingOnYourFeet.pdf"
+				href="/data/papers/StandingOnYourFeet.pdf"
 				class="collaboration-file-link">report</a
 			>. The project also included a
 			<a

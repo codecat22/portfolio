@@ -9,11 +9,11 @@
 		{ label: 'Web Design', href: '/design/web' },
 		{ label: 'Graphic Design', href: '/design/graphic' },
 		{ label: 'Collab', href: '/design/collaborations' },
-		{ label: 'Visual Art', href: '/design/art' },
-	]
+		{ label: 'Visual Art', href: '/design/art' }
+	];
 
 	let isMobile = false;
-	$: current = $page.path;
+	$: current = $page.url.pathname;
 
 	onMount(() => {
 		isMobile = deviceIsMobile();

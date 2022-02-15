@@ -17,9 +17,9 @@ export default [
 		img: '/images/web-design/trebel16-2021.PNG',
 		alt: 'main page of trebel16 website, 2021 version',
 		pageImages: [
-			{ img: '/images/web-design/trebel21-1.PNG', alt: 'trebel doors page screenshot' },
-			{ img: '/images/web-design/trebel21-2.PNG', alt: 'trebel map page screenshot' },
-			{ img: '/images/web-design/trebel21-3.PNG', alt: 'trebel history page screenshot' }
+			{ img: '/images/web-design/trebel21-1.png', alt: 'trebel doors page screenshot' },
+			{ img: '/images/web-design/trebel21-2.png', alt: 'trebel map page screenshot' },
+			{ img: '/images/web-design/trebel21-3.png', alt: 'trebel history page screenshot' }
 		],
 		subtitle: 'June 2021 - January 2022',
 		description: `An improved version of the Trebel16 website, created to meet the updated needs of the company and its clients now that it has expanded its reach.`

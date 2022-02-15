@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Contact from '$components/Contact.svelte';
-	import Nav from '$components/NavDark.svelte';
-	import Sidebar from '$components/Sidebar.svelte';
-	import sidebar from '$stores/sidebar';
+	import Contact from '../../components/Contact.svelte';
+	import Nav from '../../components/NavDark.svelte';
+	import Sidebar from '../../components/Sidebar.svelte';
+	import sidebar from '../../stores/sidebar';
 	import { page } from '$app/stores';
 
 	let clientWidth = Infinity;
@@ -11,7 +11,7 @@
 		sidebar.update((s) => !s);
 	};
 
-	$: showSidebar = $page.path.includes('/design/');
+	$: showSidebar = $page.url.pathname.includes('/design/');
 </script>
 
 <svelte:window bind:innerWidth={clientWidth} />

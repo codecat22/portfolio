@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Contact from '$components/Contact.svelte';
-	import contact from '$stores/contact';
+	import Contact from '../components/Contact.svelte';
+	import contact from '../stores/contact';
 </script>
 
 <main>

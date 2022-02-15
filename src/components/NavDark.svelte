@@ -7,10 +7,10 @@
 	import ContactButton from '../components/ContactIconDark.svelte';
 	import BurgerIcon from '../components/BurgerIcon.svelte';
 	import ReturnArrow from '../components/ReturnArrow.svelte';
-	import contact from '$stores/contact';
+	import contact from '../stores/contact';
 
-	$: isSubPage = $page.path.split('/').length >= 4;
-	$: hideMenuButton = $page.path === '/design';
+	$: isSubPage = $page.url.pathname.split('/').length >= 4;
+	$: hideMenuButton = $page.url.pathname === '/design';
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -18,11 +18,11 @@
 <nav class={$$props.class}>
 	<a href="/"><HomeButton /></a>
 	<a href="/writing"><WritingButton /></a>
-	<a href={$page.path.split('/').slice(0, -1).join('/')} class:hidden={!isSubPage}
+	<a href={$page.url.pathname.split('/').slice(0, -1).join('/')} class:hidden={!isSubPage}
 		><ReturnArrow class="return-arrow" /></a
 	>
 	<div class="right-item grd">
-		<button><ContactButton on:click={() => contact.set(true)} /></button>
+		<button class:move-right={hideMenuButton} ><ContactButton on:click={() => contact.set(true)} /></button>
 		{#if !hideMenuButton}
 			<div class="menu" on:click={() => dispatch('menu-click')}>
 				<BurgerIcon class="burger-icon" />
@@ -32,6 +32,10 @@
 </nav>
 
 <style>
+	.move-right {
+		grid-column: 2;
+	}
+
 	.hidden {
 		display: none;
 	}

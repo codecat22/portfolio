@@ -1,7 +1,6 @@
 <script lang="ts">
-	import data from '$data/web-design';
-	import Sidebar from '$components/Sidebar.svelte';
-	import placeholder from '$actions/placeholder';
+	import data from '../../../data/web-design';
+	import placeholder from '../../../actions/placeholder';
 
 	const chunk = (arr: any[], columnCount: number): any[][] =>
 		Array.from({ length: columnCount }, (_v, arrayIndex) => {

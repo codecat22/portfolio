@@ -1,5 +1,5 @@
 <script lang="ts">
-	import collaborations from '$data/collaborations';
+	import collaborations from '../../../data/collaborations';
 	const { img, authors, alt, title } = collaborations.thesis;
 </script>
 
@@ -28,7 +28,7 @@
 		<p>
 			The full text of the thesis is available <a
 				target="blank"
-				href="/static/data/papers/PDPVWebSystemThesis.pdf"
+				href="/data/papers/PDPVWebSystemThesis.pdf"
 				class="collaboration-file-link">here</a
 			>.
 		</p>

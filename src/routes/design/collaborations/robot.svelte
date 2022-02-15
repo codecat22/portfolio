@@ -1,5 +1,5 @@
 <script lang="ts">
-	import collaborations from '$data/collaborations';
+	import collaborations from '../../../data/collaborations';
 	const { img, authors, alt, title } = collaborations.robot;
 </script>
 
@@ -30,7 +30,7 @@
 			>, and a video showing off the Furhat Instructor is available to watch
 			<a
 				target="blank"
-				href="/static/data/papers/FurhatCulinaryInstructor.pdf"
+				href="/data/papers/FurhatCulinaryInstructor.pdf"
 				class="collaboration-file-link">here</a
 			>.
 		</p>

@@ -30,7 +30,7 @@ export default [
 	{
 		name: 'PDPVWebSystemThesis',
 		date: 'January 2020',
-		title: 'Precipitation Data Processing and Visualisation Web System',
+		title: 'Precipitation Data Processing and Visualisation',
 		abstract:
 			'This document presents the results of our thesis project: an automatic web system for downloading, processing, and visualizing precipitation data obtained via NASA’s GPM Mission.'
 	},
@@ -80,6 +80,6 @@ export default [
 		date: 'May 2021',
 		title: 'Script for the Yunak game demo',
 		abstract:
-			'A draft of the script to a story=based puzzle game based around Bulgarian mythology - Yunak.'
+			'A draft of the script to a story-based puzzle game based around Bulgarian mythology - Yunak.'
 	}
 ];

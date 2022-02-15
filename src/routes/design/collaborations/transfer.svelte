@@ -1,5 +1,5 @@
 <script lang="ts">
-	import collaborations from '$data/collaborations';
+	import collaborations from '../../../data/collaborations';
 	const { img, authors, alt, title } = collaborations.transfer;
 </script>
 
@@ -28,7 +28,7 @@
 			appearance of an input artwork is applied to any input photograph. For more details, please
 			refer to the <a
 				target="blank"
-				href="/static/data/papers/StyleTransferMLW.pdf"
+				href="/data/papers/StyleTransferMLW.pdf"
 				class="collaboration-file-link">paper</a
 			> that resulted from this project.
 		</p>

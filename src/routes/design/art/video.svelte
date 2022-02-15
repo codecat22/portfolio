@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FilterBar from '$components/FilterBar.svelte';
+	import FilterBar from '../../../components/FilterBar.svelte';
 
 	const onlyUnique = (value, index, self) => self.indexOf(value) === index;
 

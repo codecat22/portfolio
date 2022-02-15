@@ -2,7 +2,7 @@
 	import HomeButton from '../components/HomeButton.svelte';
 	import DesignButton from '../components/DesignButton.svelte';
 	import ContactButton from '../components/ContactButton.svelte';
-	import contact from '$stores/contact';
+	import contact from '../stores/contact';
 </script>
 
 <nav>

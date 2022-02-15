@@ -15,7 +15,7 @@
 	/>
 
 	<link rel="stylesheet" href="/global.css" />
-	<title>Catfolio</title>
+	<title>Portfolio - Siyana Ivanova</title>
 </svelte:head>
 
 <slot />

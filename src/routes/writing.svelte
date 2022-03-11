@@ -1,34 +1,18 @@
 <script lang="ts">
+	import Contact from '../components/Contact.svelte';
 	import Nav from '../components/Nav.svelte';
-	// import ArrowRight from '../components/ArrowRight.svelte';
 	import papers from '../data/papers';
-
-	// const wordCountScale = 0.16;
-	// const wordCountMin = 120;
 
 	let clientWidth = 0;
 
 	const docsData = Object.values(papers);
 	let docs = docsData;
-
-	//TODO move to use directive
-	// const limitAbstractWidth = (abstract: string, windowWidth: number): string => {
-	// 	const txt = abstract.trim().split('');
-	// 	const desiredCount = Math.ceil(Math.max(windowWidth * wordCountScale, wordCountMin));
-	// 	if (txt.length > desiredCount) return txt.slice(0, desiredCount).join('') + ' ...';
-	// 	return abstract;
-	// };
-
-	// $: docs = docs.map((doc, index) => ({
-	// 	...doc,
-	// 	abstract: limitAbstractWidth(docsData[index].abstract, clientWidth)
-	// }));
 </script>
 
 <svelte:window bind:innerWidth={clientWidth} />
 
 <main>
-	<Nav />
+	<Nav isWriting />
 	<h2>Academic Papers & Articles</h2>
 	<ul>
 		{#each docs as { date, title, abstract, name }}
@@ -36,12 +20,11 @@
 				<p class="doc-date">{date}</p>
 				<h3 class="doc-title">{title}</h3>
 				<p class="doc-abstract">{abstract}</p>
-				<!-- <div class="arrow-right">
-					<ArrowRight class="arrow-icon" />
-				</div> -->
 			</a>
 		{/each}
 	</ul>
+
+	<Contact />
 </main>
 
 <style>
@@ -49,32 +32,14 @@
 		background-color: var(--white);
 		transition: all ease-in-out 0.3s;
 		transform: scale(1.2);
-		box-shadow: 0px 4px 4px 0px #00000040;
+		box-shadow: 0px 2px 4px 0px #00000040;
 		z-index: 100;
 	}
-
-	/* .arrow-right {
-		width: 4rem;
-		display: grid;
-		place-content: center;
-		height: 4rem;
-		transition: all ease-in-out 0.3s;
-		margin-left: auto;
-		margin-top: auto;
-	}
-
-	a:hover > .arrow-right {
-		background-color: #b8b42d;
-	}
-
-	a:hover > .arrow-right > :global(.arrow-icon) {
-		color: var(--white);
-	} */
 
 	.doc-abstract {
 		margin-left: 1rem;
 		margin-right: 1rem;
-		font-family: 'Open Sans', sans-serif;
+		font-family: var(--font-main-alt);
 		height: 43%;
 		--val: 1vw;
 		--min: 0.6rem;
@@ -82,21 +47,21 @@
 
 	.doc-title {
 		margin: 1rem;
-		font-family: 'Lalezar', cursive;
-		--val: 1.8vw;
+		font-family: var(--font-header-alt);
+		--val: 1.5vw;
 		transition: all ease-in-out 0.3s;
 	}
 
 	a:hover > .doc-title {
-		color: #db5461;
+		color: var(--paradise);
 		transition: all ease-in-out 0.3s;
 	}
 
 	.doc-date {
-		color: var(--gray);
+		color: var(--light-gray);
 		--val: 0.8vw;
 		--min: 0.5rem;
-		font-family: 'Open Sans', sans-serif;
+		font-family: var(--font-main-alt);
 	}
 
 	ul {
@@ -137,12 +102,12 @@
 		padding-bottom: 1em;
 		padding-right: 0px;
 		text-decoration: none;
-		color: var(--black);
+		color: black;
 	}
 
 	main {
 		min-height: 100vh;
-		background-color: var(--yellow);
+		background-color: white;
 		display: flex;
 		flex-direction: column;
 	}
@@ -151,5 +116,7 @@
 		text-align: center;
 		font-weight: 100;
 		--val: 2.2vw;
+		font-family: var(--font-header-alt);
+		color: black;
 	}
 </style>

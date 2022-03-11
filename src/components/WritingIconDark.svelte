@@ -1,26 +1,20 @@
-<svg
-	width="24"
-	height="18"
-	viewBox="0 0 24 18"
-	fill="none"
-	xmlns="http://www.w3.org/2000/svg"
-	on:click
->
-	<rect width="24" height="18" fill="#362F37" />
-	<rect x="0.5" y="0.5" width="9" height="13" fill="#B8B42D" stroke="#362F37" />
-	<rect x="7.5" y="2.5" width="9" height="13" fill="#B8B42D" stroke="#362F37" />
-	<rect x="14.5" y="4.5" width="9" height="13" fill="#B8B42D" stroke="#362F37" />
-	<rect x="2" y="2" width="1" height="2" fill="#362F37" />
-	<rect x="16" y="6" width="1" height="2" fill="#362F37" />
-	<rect x="9" y="4" width="1" height="2" fill="#362F37" />
-	<line x1="9" y1="7.5" x2="13" y2="7.5" stroke="#362F37" />
-	<line x1="18" y1="7.5" x2="22" y2="7.5" stroke="#362F37" />
-	<line x1="9" y1="11.5" x2="13" y2="11.5" stroke="#362F37" />
-	<line x1="9" y1="9.5" x2="13" y2="9.5" stroke="#362F37" />
-	<line x1="2" y1="5.5" x2="6" y2="5.5" stroke="#362F37" />
-	<line x1="2" y1="9.5" x2="6" y2="9.5" stroke="#362F37" />
-	<line x1="2" y1="7.5" x2="6" y2="7.5" stroke="#362F37" />
-	<line x1="16" y1="13.5" x2="20" y2="13.5" stroke="#362F37" />
-	<line x1="16" y1="9.5" x2="22" y2="9.5" stroke="#362F37" />
-	<line x1="16" y1="11.5" x2="22" y2="11.5" stroke="#362F37" />
+<svg width="25" height="18" viewBox="0 0 25 18" fill="none" xmlns="http://www.w3.org/2000/svg" on:click>
+	<path
+		fill-rule="evenodd"
+		clip-rule="evenodd"
+		d="M8.39238 0H0.392334V13.7647H6.95134V1.05882H8.39238V0ZM1.4855 1.05882H2.57867V3.17647H1.4855V1.05882ZM5.85817 5.29412H1.4855V4.23529H5.85817V5.29412ZM1.4855 9.52941H5.85817V8.47059H1.4855V9.52941ZM5.85817 7.41177H1.4855V6.35294H5.85817V7.41177Z"
+		fill="#6DA34D"
+	/>
+	<path
+		fill-rule="evenodd"
+		clip-rule="evenodd"
+		d="M24.3924 4.23529H15.6967V18H24.3924V4.23529ZM17.883 5.29412H16.7898V7.41177H17.883V5.29412ZM18.9762 7.41177H23.3489V6.35294H18.9762V7.41177ZM16.7898 13.7647V12.7059H21.1625V13.7647H16.7898ZM16.7898 9.52941H23.3489V8.47059H16.7898V9.52941ZM23.3489 11.6471H16.7898V10.5882H23.3489V11.6471Z"
+		fill="#6DA34D"
+	/>
+	<path
+		fill-rule="evenodd"
+		clip-rule="evenodd"
+		d="M16.3923 2.11765V3.17647H14.6035V15.8824H8.04451V2.11765H16.3923ZM9.13768 3.17647H10.2308V5.29412H9.13768V3.17647ZM13.5103 11.6471H9.13768V10.5882H13.5103V11.6471ZM9.13768 9.52941H13.5103V8.47059H9.13768V9.52941ZM13.5103 7.41177H9.13768V6.35294H13.5103V7.41177Z"
+		fill="#6DA34D"
+	/>
 </svg>

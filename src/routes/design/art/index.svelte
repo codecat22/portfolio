@@ -3,8 +3,6 @@
 	import Sidebar from '../../../components/Sidebar.svelte';
 </script>
 
-<h2 class="design-title">Visual Art</h2>
-
 <section class="design-main cover-cards-container">
 	<a href="/design/art/photos" class="cover-card">
 		<img

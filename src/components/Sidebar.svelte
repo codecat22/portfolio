@@ -13,7 +13,7 @@
 	];
 
 	let isMobile = false;
-	$: current = $page.url.pathname;
+	$: current = $page.path;
 
 	onMount(() => {
 		isMobile = deviceIsMobile();
@@ -59,7 +59,6 @@
 		transition: all ease-in-out 0.3s;
 		grid-column: 3;
 		grid-row: 3;
-		transform: translateX(0%);
 		z-index: 100;
 	}
 

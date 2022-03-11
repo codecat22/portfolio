@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Contact from '../../components/Contact.svelte';
-	import Nav from '../../components/NavDark.svelte';
+	import Nav from '../../components/Nav.svelte';
 	import Sidebar from '../../components/Sidebar.svelte';
 	import sidebar from '../../stores/sidebar';
 	import { page } from '$app/stores';
@@ -10,8 +10,7 @@
 	const handleMenuClick = () => {
 		sidebar.update((s) => !s);
 	};
-
-	$: showSidebar = $page.url.pathname.includes('/design/');
+	$: showSidebar = $page.path.includes('/design/');
 </script>
 
 <svelte:window bind:innerWidth={clientWidth} />
@@ -39,6 +38,7 @@
 		background-color: var(--brown);
 		min-height: 100vh;
 		padding-bottom: 2rem;
+		overflow-x: hidden;
 	}
 
 	@media (max-width: 1200px) {

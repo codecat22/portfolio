@@ -54,8 +54,13 @@
 	hr {
 		background-color: white;
 		color: white;
-		width: 50%;
-		/* margin-bottom: 1rem; */
+		width: 35%;
+		transition: width 0.2s ease-in-out;
+	}
+
+	a:hover > hr {
+		width: 60%;
+		transition: width 0.2s ease-in-out;
 	}
 
 	.doc-abstract {

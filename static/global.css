@@ -231,8 +231,8 @@ p {
 
 .design-main {
     overflow: auto;
-    grid-column: 2;
-    grid-row: 3;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 #svelte {

@@ -2,9 +2,12 @@
 	import FilterBar from '../../../components/FilterBar.svelte';
 	import { makeTagsFromUrls } from '../../../utils/index';
 	import images from '../../../data/images';
+	import clickOutside from '../../../actions/clickOutside';
 
-	// const galleryImport = import.meta.glob('images/art/gallery/**/*.{jpg,JPG,png,PNG}');
 	const names = [
+		'Poster',
+		'Goat power',
+		'Geometry',
 		'Bridge at night',
 		'Rila',
 		'Raleigh',
@@ -18,9 +21,10 @@
 	];
 
 	const getNum = (url: string): number => parseInt(url.split('/').pop().split(',')[0].trim());
+	let selectedImage = '';
 
 	const allGalleryUrls = images['art-gallery'];
-	allGalleryUrls.sort((a, b) => (getNum(a) > getNum(b) ? 1 : -1));
+	// allGalleryUrls.sort((a, b) => (getNum(a) > getNum(b) ? 1 : -1));
 	const tags = makeTagsFromUrls(allGalleryUrls);
 
 	let filter: FilterOptions = 'featured';
@@ -42,19 +46,49 @@
 <section class="design-main">
 	<div class="art-gallery">
 		{#each galleryUrls as href, i}
-			<div class="art-card card-{getNum(href)}">
+			<div class="art-card card-{getNum(href)}" on:click={() => (selectedImage = href)}>
 				<img class="art" src={href} loading="lazy" alt={extractNameFromUrl(href)} />
 				<p class="art-description">{names[i] || 'A pretty'}</p>
 			</div>
 		{/each}
 	</div>
 </section>
+{#if selectedImage !== ''}
+	<div class="image-overlay">
+		<img
+			use:clickOutside
+			on:click-outside={() => (selectedImage = '')}
+			class="overlay-image"
+			src={selectedImage}
+			loading="lazy"
+			alt={extractNameFromUrl(selectedImage)}
+		/>
+	</div>
+{/if}
 
 <style>
+	.image-overlay {
+		position: fixed;
+		display: grid;
+		place-content: center;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(255, 255, 255, 0.7);
+		cursor: pointer;
+	}
+
+	.overlay-image {
+		max-height: 95vh;
+		max-width: 90vw;
+		cursor: auto;
+	}
+
 	.art-gallery {
 		display: flex;
 		flex-flow: row wrap;
-		/* justify-content: center; */
 	}
 
 	@media (max-width: 600px) {
@@ -65,8 +99,14 @@
 
 	.art-card {
 		margin: 0.5em;
-		max-width: 23ch;
+		max-width: 40ch;
 		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.art-card:hover > .art {
+		filter: grayscale(100%) opacity(45%);
+		transition: all 0.2s ease-in-out;
 	}
 
 	.art-card.card-2 {
@@ -74,13 +114,12 @@
 	}
 
 	.art {
-		border: 1px solid rgba(189, 192, 199, 0.3);
 		max-width: 100%;
 		height: auto;
 	}
 
 	.art-description {
-		font-family: 'Montserrat', sans-serif;
+		font-family: var(--font-header);
 		font-weight: 400;
 		text-align: center;
 		color: var(--white);

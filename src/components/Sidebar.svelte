@@ -30,7 +30,7 @@
 	};
 </script>
 
-<nav class:closed={!$sidebarIsOpen} use:scrollOutside on:scroll-outside={handleScrollOutside}>
+<!-- <nav class:closed={!$sidebarIsOpen} use:scrollOutside on:scroll-outside={handleScrollOutside}>
 	<ul class:closed={!$sidebarIsOpen}>
 		{#each links as { href, label }}
 			<li class:disabled={current === href}>
@@ -42,7 +42,7 @@
 			</li>
 		{/each}
 	</ul>
-</nav>
+</nav> -->
 
 <style>
 	nav {

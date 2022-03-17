@@ -21,10 +21,10 @@
 		<img
 			class="cover-card-image"
 			src="/images/art/covers/video-cover.PNG"
-			alt="sad person pretending cooking"
+			alt="sad person pretending to be cooking"
 		/>
 		<div class="cover-card-caption">
-			<h2 class="cover-card-caption-label">Video</h2>
+			<h2 class="cover-card-caption-label">Videos</h2>
 			<div class="cover-card-arrow-container">
 				<ArrowRight class="cover-card-caption-arrow" />
 			</div>
@@ -60,7 +60,7 @@
 
 	.cover-card-arrow-container {
 		opacity: 0;
-		background: var(--purple);
+		background: var(--middle-blue);
 		margin-left: auto;
 		display: grid;
 		place-content: center;
@@ -73,8 +73,8 @@
 	}
 
 	.cover-card-caption-label {
-		font-family: 'Lalezar', cursive;
-		color: var(--white);
+		font-family: var(--font-header);
+		color: white;
 		--val: 2vw;
 		flex: 8;
 		margin: 0.5rem;
@@ -87,16 +87,14 @@
 		bottom: 15%;
 		left: 0;
 		display: flex;
-		background: var(--black);
+		background: var(--liberty);
 		min-width: 45%;
 		transition: min-width 0.3s linear;
 	}
 
 	.cover-card {
-		box-shadow: 4px 4px 4px 0px rgba(10, 10, 10, 0.5);
 		position: relative;
 		height: min-content;
-		border-top: 5px solid var(--black);
 		display: flex;
 		cursor: pointer;
 	}
@@ -104,14 +102,18 @@
 	.cover-card-image {
 		max-width: 100%;
 		height: auto;
+		border-radius: 15%;
 	}
 
 	.cover-cards-container {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		height: 100%;
 		gap: 2rem;
-		padding: 4rem 0.5rem;
+		height: 100%;
+		flex: 1;
+		align-items: center;
+		padding-left: 4%;
+		padding-right: 4%;
 	}
 
 	@media (max-width: 1200px) {

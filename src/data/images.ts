@@ -91,8 +91,11 @@ export default {
 		'/images/art/photos/other/village, summer, mountain.jpg'
 	],
 	'art-gallery': [
-		'/images/art/gallery/featured/1, black-and-white, landscape.jpg',
+		'/images/art/gallery/featured/1, colour, poster.png',
+		'/images/art/gallery/featured/1, fantasy, colour, poster.png',
+		'/images/art/gallery/featured/1, poster, abstract, colour.png',
 		'/images/art/gallery/featured/2, black-and-white, landscape.jpg',
+		'/images/art/gallery/featured/2, landscape, black-and-white.jpg',
 		'/images/art/gallery/featured/3, black-and-white, pencil, portrait.jpg',
 		'/images/art/gallery/featured/4, colour, abstract.jpg',
 		'/images/art/gallery/featured/5, colour, abstract.jpg',

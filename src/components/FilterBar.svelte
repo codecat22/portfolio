@@ -5,6 +5,9 @@
 	export let tags: string[] = [];
 	export let selectedTags: string[] = [];
 
+	let tagsClicked = false;
+	$: showTags = filter === 'tags' && tagsClicked === true
+
 	const handleTagClick = (tag: string) => {
 		if (selectedTags.includes(tag)) selectedTags = selectedTags.filter((t) => t !== tag);
 		else selectedTags = [...selectedTags, tag];
@@ -23,7 +26,10 @@
 		<button
 			class="filter"
 			class:selected-filter={filter === 'tags'}
-			on:click={() => (filter = 'tags')}
+			on:click={() => {
+				filter = 'tags';
+				tagsClicked = !tagsClicked;
+			}}
 		>
 			<p class="filter-label">Tags</p>
 		</button>
@@ -35,7 +41,7 @@
 			<p class="filter-label">All</p>
 		</button>
 	</div>
-	{#if filter === 'tags'}
+	{#if showTags}
 		<div class="tags" transition:slide>
 			{#each tags.sort() as tag}
 				<button class="tag" class:selected={selectedTags.includes(tag)} on:click={() => handleTagClick(tag)}>{tag}</button>
@@ -55,16 +61,16 @@
 
 	.tag {
 		margin: 0 1ch 1ch 1ch;
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 300;
+		font-family: var(--font-main);
+		font-size: 1em;
 		background: transparent;
-		color: var(--light-gray);
+		color: white;
 		border: none;
 		cursor: pointer;
 	}
 
 	.tag.selected {
-		color: var(--pink);
+		color: var(--sea-green);
 	}
 
 	.filters-bar {
@@ -74,6 +80,8 @@
 		justify-content: center;
 		align-items: center;
 		margin-top: 1em;
+		padding-left: 3%;
+		padding-right: 3%;
 	}
 
 	.filters {
@@ -96,7 +104,7 @@
 	}
 
 	.filter.selected-filter::after {
-		background-color: var(--white);
+		background-color: white;
 		transform: scaleX(1);
 	}
 
@@ -117,8 +125,8 @@
 	}
 
 	.filter-label {
-		color: var(--white);
-		font-family: 'Open Sans', sans-serif;
-		font-size: 0.9em;
+		color: white;
+		font-family: var(--font-header);
+		font-size: 1em;
 	}
 </style>

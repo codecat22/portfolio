@@ -227,6 +227,7 @@ p {
     grid-column: 2;
     transition: all ease-in-out 0.3s;
     margin-bottom: 1.5em;
+    font-family: var(--font-header) !important;
 }
 
 .design-main {

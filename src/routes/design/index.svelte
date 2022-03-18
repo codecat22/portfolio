@@ -66,8 +66,8 @@
 	.doc-abstract {
 		margin-left: 1rem;
 		margin-right: 1rem;
-		font-family: var(--font-main);
 		margin-bottom: 1rem;
+		font-family: var(--font-main);
 		--val: 1vw;
 		--min: 0.6rem;
 		color: white;
@@ -143,6 +143,7 @@
 		padding: 0.3em 0 0 0.3em;
 		text-decoration: none;
 		color: var(--black);
+		justify-content: center;
 	}
 
 	:global(.design-layout-main) {

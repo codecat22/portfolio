@@ -10,7 +10,7 @@
 	let selectedImage = '';
 
 	let filter: FilterOptions = 'featured';
-	let selectedTags: string[] = ['animals'];
+	let selectedTags: string[] = [tags.sort()[0]];
 	$: photoUrls =
 		filter === 'featured'
 			? allPhotoUrls.filter((url) => url.includes(`/featured/`))

@@ -12,8 +12,7 @@
 	}
 
 	:global(.web-design-file-link) {
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 600;
+		font-family: var(--font-main) !important;
 		text-decoration: underline;
 		color: var(--white);
 		font-size: inherit;
@@ -62,17 +61,24 @@
 	}
 
 	:global(.web-design-description > p) {
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 400;
+		font-family: var(--font-main);
 		color: var(--white);
 		margin-bottom: 1em;
 	}
 
+	:global(.web-design-description > p:first-child) {
+		font-size: 1.5vw;
+	}
+
+	:global(.web-design-description > p:not(:first-child)) {
+		font-size: 1vw;
+	}
+
 	:global(.web-design-authors) {
-		font-family: 'Open Sans', sans-serif;
+		font-family: var(--font-header) !important;
 		font-weight: 300;
-		color: var(--light-gray);
-		--val: 0.2vw;
+		color: white;
+		--val: 0.34w;
 		--min: 0.7em;
 		margin-top: 1em;
 	}

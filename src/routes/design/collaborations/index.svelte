@@ -2,77 +2,79 @@
 	import data from '../../../data/collaborations';
 	import Sidebar from '../../../components/Sidebar.svelte';
 
-	const chunk = (arr: any[], columnCount: number): any[][] =>
-		Array.from({ length: columnCount }, (_v, arrayIndex) => {
-			return arr.filter((_it, itemIndex) => itemIndex % columnCount === arrayIndex);
-		});
-
-	let columns = chunk(Object.entries(data), 3);
-	let clientWidth = Infinity;
-
-	$: columns = chunk(Object.entries(data), clientWidth >= 1200 ? 3 : clientWidth >= 768 ? 2 : 1);
+	const cards = Object.entries(data);
 </script>
 
-<svelte:window bind:innerWidth={clientWidth} />
-
-<h2 class="design-title">Collaborations</h2>
-
 <section class="design-main">
-	<div class="masonry">
-		{#each columns as cards}
-			<div class="column">
-				{#each cards as [id, card]}
-					<a class={`card ${id}`} href="/design/collaborations/{id}">
-						<img
-							class="card-image {id}"
-							src={`/images/collaborations/${card.img}`}
-							alt={card.alt}
-						/>
-						<div class="card-main {id}">
-							<h3 class="card-title {id}">{card.title}</h3>
-							<p class="card-authors {id}">{card.authors}</p>
-							<p class="card-description {id}">{card.description}</p>
-						</div>
-					</a>
-				{/each}
+	{#each cards as [id, card]}
+		<a class={`card ${id}`} href="/design/collaborations/{id}">
+			<img class="card-image {id}" src={`/images/collaborations/${card.img}`} alt={card.alt} />
+			<div class="image-overlay">
+				<p class="card-title">{card.title}</p>
 			</div>
-		{/each}
-	</div>
+		</a>
+	{/each}
 </section>
 
 <Sidebar />
 
 <style>
-	.masonry {
-		display: flex;
-		justify-content: center;
+	.card-title {
+		font-family: var(--font-header) !important;
+		opacity: 0;
+		text-align: center;
+		transition: all 0.2s ease-in-out;
+	}
+	
+	.image-overlay:hover > .card-title {
+		transition: all 0.5s ease-in-out;
+		opacity: 1;
 	}
 
-	.column {
-		display: flex;
-		flex-flow: column;
+	.image-overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		background-color: rgb(35, 240, 199, 0);
+		transition: all 0.4s ease-in-out;
+		display: grid;
+		place-content: center;
+		padding: 1em;
+	}
+	
+	.image-overlay:hover {
+		background-color: rgb(35, 240, 199, 0.85);
+		transition: all 0.4s ease-in-out;
+	}
+
+	section {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		height: 100%;
+		flex: 1;
+		align-items: center;
+		padding-left: 4%;
+		padding-right: 4%;
 	}
 
 	.card {
-		box-shadow: 2px 2px 4px 0px #0a0a0a80;
-		border: 1px solid rgba(10, 10, 10, 0.3);
-		border-top: 5px solid var(--black);
-		margin: 0.5rem;
-		margin-top: 0;
-		margin-bottom: 1rem;
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		height: min-content;
 		cursor: pointer;
-		min-width: 20ch;
-		max-width: 40ch;
 		text-decoration: none;
+		position: relative;
 	}
 
 	.card-image {
-		max-width: 100%;
-		height: auto;
-		margin: max(1rem, 1.2vw);
+		object-fit: cover;
+		width: 100%;
+		height: 30ch;
 	}
 
 	.card-main {

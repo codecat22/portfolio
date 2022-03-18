@@ -6,7 +6,8 @@
 	export let selectedTags: string[] = [];
 
 	let tagsClicked = false;
-	$: showTags = filter === 'tags' && tagsClicked === true
+	$: if (filter !== 'tags') tagsClicked = false;
+	$: showTags = filter === 'tags' && tagsClicked === true;
 
 	const handleTagClick = (tag: string) => {
 		if (selectedTags.includes(tag)) selectedTags = selectedTags.filter((t) => t !== tag);
@@ -44,7 +45,11 @@
 	{#if showTags}
 		<div class="tags" transition:slide>
 			{#each tags.sort() as tag}
-				<button class="tag" class:selected={selectedTags.includes(tag)} on:click={() => handleTagClick(tag)}>{tag}</button>
+				<button
+					class="tag"
+					class:selected={selectedTags.includes(tag)}
+					on:click={() => handleTagClick(tag)}>{tag}</button
+				>
 			{/each}
 		</div>
 	{/if}

@@ -24,11 +24,10 @@
 	let selectedImage = '';
 
 	const allGalleryUrls = images['art-gallery'];
-	// allGalleryUrls.sort((a, b) => (getNum(a) > getNum(b) ? 1 : -1));
 	const tags = makeTagsFromUrls(allGalleryUrls);
 
 	let filter: FilterOptions = 'featured';
-	let selectedTags: string[] = ['black-and-white'];
+	let selectedTags: string[] = [tags.sort()[0]];
 	$: galleryUrls =
 		filter === 'featured'
 			? allGalleryUrls.filter((url) => url.includes(`/featured/`))

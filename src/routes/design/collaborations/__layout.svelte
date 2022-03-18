@@ -13,8 +13,7 @@
 	}
 
 	:global(.collaboration-file-link) {
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 600;
+		font-family: var(--font-main) !important;
 		text-decoration: underline;
 		color: var(--white);
 		font-size: inherit;
@@ -38,6 +37,11 @@
 
 	:global(.collaboration-description) {
 		padding: 0 0 0 2em;
+		font-family: var(--font-main);
+	}
+
+	:global(.collaboration-description > p) {
+		font-family: var(--font-main) !important;
 	}
 
 	@media (max-width: 600px) {
@@ -62,17 +66,24 @@
 	}
 
 	:global(.collaboration-description > p) {
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 400;
+		font-family: var(--font-main);
 		color: var(--white);
 		margin-bottom: 1em;
 	}
 
+	:global(.collaboration-description > p:first-child) {
+		font-size: 1.5vw;
+	}
+
+	:global(.collaboration-description > p:not(:first-child)) {
+		font-size: 1vw;
+	}
+
 	:global(.collaboration-authors) {
-		font-family: 'Open Sans', sans-serif;
+		font-family: var(--font-header) !important;
 		font-weight: 300;
-		color: var(--light-gray);
-		--val: 0.2vw;
+		color: white;
+		--val: 0.34w;
 		--min: 0.7em;
 		margin-top: 1em;
 	}

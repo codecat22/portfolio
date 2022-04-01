@@ -32,7 +32,7 @@
 	</a>
 	<a href="/design/art/art-gallery" class="cover-card">
 		<img
-			class="cover-card-image"
+			class="cover-card-image flip-image"
 			src="/images/art/covers/art-cover.PNG"
 			alt="drawn black and white bridge"
 		/>
@@ -48,6 +48,9 @@
 <Sidebar />
 
 <style>
+	.flip-image {
+		transform: scaleX(-1);
+	}
 	.cover-card:hover .cover-card-caption {
 		min-width: 100%;
 	}

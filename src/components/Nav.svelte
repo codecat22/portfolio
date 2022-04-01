@@ -11,7 +11,7 @@
 	import contact from '../stores/contact';
 
 	export let isWriting = false;
-	export let iconColor = "#6DA34D";
+	export let iconColor = '#6DA34D';
 
 	$: isSubPage = $page.path.split('/').length >= 4;
 	$: hideMenuButton = !isWriting ? $page.path === '/design' : true;
@@ -21,8 +21,8 @@
 
 <nav class={$$props.class}>
 	<a href="/"><HomeButton color={iconColor} /></a>
-	{#if isWriting}<a href="/design"><DesignButton /></a>{/if}
 	{#if !isWriting}<a href="/writing"><WritingButton color={iconColor} /></a>{/if}
+	{#if isWriting || !hideMenuButton}<a href="/design"><DesignButton color={iconColor} /></a>{/if}
 	<a href={$page.path.split('/').slice(0, -1).join('/')} class:hidden={!isSubPage}
 		><ReturnArrow class="return-arrow" /></a
 	>

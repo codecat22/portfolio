@@ -141,10 +141,27 @@ table {
     --white: rgba(255, 250, 255, 1);
     --black: rgba(10, 10, 10, 1);
     --gray: #7D8491;
-    --light-gray: #BDC0C7;
     --purple: #3F334D;
     --pink: #DB5461;
+
+    --sea-green: #23F0C7;
+    --liberty: #6457A6;
+    --middle-blue: #7D7ABC;
+    --lemon-yellow: #FAF33E;
+    --misty-rose: #FDE8E9;
+    --bud-green: #6DA34D;
+    --paradise: #EE4266;
+    --ultra-red: #F76F8E;
+    --light-gray: #B2AFA9;
+    --violet: #23022E;
+
     --mobile-width: 768px;
+
+    --font-header: 'Roboto Condensed', Sans-Serif;
+    --font-main: 'Cabin', Sans-Serif;
+
+    --font-header-alt: 'Merriweather', Serif;
+    --font-main-alt: 'Muli', Sans-Serif;
 }
 
 
@@ -210,12 +227,13 @@ p {
     grid-column: 2;
     transition: all ease-in-out 0.3s;
     margin-bottom: 1.5em;
+    font-family: var(--font-header) !important;
 }
 
 .design-main {
     overflow: auto;
-    grid-column: 2;
-    grid-row: 3;
+    margin-left: 4%;
+    margin-right: 4%;
 }
 
 #svelte {
@@ -224,4 +242,12 @@ p {
 
 main {
     position: relative;
+}
+
+.font-header {
+    font-family: 'Roboto Condensed', Sans-Serif;
+}
+
+.font-main {
+    font-family: 'Cabin', Sans-Serif;
 }

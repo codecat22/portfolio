@@ -5,19 +5,19 @@
 
 <main>
 	<aside>
-		<h3 class="portfolio-title">Interactive Portfolio</h3>
+		<h3 class="portfolio-title font-main">Interactive Portfolio</h3>
 		<a href="/design" class="design-link">
-			<h1 class="design-header">Design</h1>
+			<h1 class="design-header font-header">Design</h1>
 		</a>
 	</aside>
 	<aside>
-		<h3 class="name-title">inz. Siyana Ivanova</h3>
+		<h3 class="name-title font-main">inz. Siyana Ivanova</h3>
 		<a href="/writing" class="writing-link">
-			<h1 class="writing-header">Writing</h1>
+			<h1 class="writing-header font-header">Writing</h1>
 		</a>
 	</aside>
-	<h2>Welcome! En<em>joy your stay.</em></h2>
-	<button on:click={() => contact.set(true)}>Contact me</button>
+	<h2 class="font-main">Welcome! En<em>joy your stay.</em></h2>
+	<button class="font-main" on:click={() => contact.set(true)}>Contact me</button>
 	<Contact />
 </main>
 
@@ -28,16 +28,17 @@
 		position: absolute;
 		transform: translate(-50%, -50%);
 		left: 50%;
-		bottom: 0;
-		background-color: var(--green);
+		bottom: -2%;
+		background-color: var(--bud-green);
 		box-shadow: 0px 2px 3px 0px #0a0a0a80;
-		border-radius: 15px;
+		border-radius: 25px;
 		border: none;
 		--min: 1.2em;
 		--val: 1.9vw;
 		--max: 3em;
-		padding: 0.1em 0.3em 0.1em 0.3em;
 		cursor: pointer;
+		font-weight: 300;
+		padding: 0.5em;
 	}
 
 	button:hover {
@@ -53,7 +54,7 @@
 
 	aside {
 		width: 50.2%;
-		background-color: var(--brown);
+		background-color: var(--liberty);
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -61,7 +62,7 @@
 
 	aside:last-of-type {
 		width: 49.8%;
-		background-color: var(--yellow);
+		background-color: var(--white);
 		position: relative;
 	}
 
@@ -91,7 +92,7 @@
 	}
 
 	.writing-header {
-		color: var(--black);
+		color: black;
 		position: absolute;
 		left: 63%;
 		top: 80%;
@@ -100,7 +101,7 @@
 
 	.portfolio-title {
 		margin-top: 0.2rem;
-		color: var(--yellow);
+		color: var(--white);
 		text-align: end;
 		margin-right: 2rem;
 	}
@@ -108,25 +109,29 @@
 	.name-title {
 		margin-top: 0.2rem;
 		margin-left: 2rem;
-		color: var(--brown);
+		color: black;
 	}
 
 	h2 {
 		text-align: center;
 		color: var(--white);
-		text-shadow: 1px 2px 3px rgba(10, 10, 10, 0.75);
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		pointer-events: none;
 		width: 25ch;
-		/* width: min-content; */
+		font-weight: 400;
+		--val: 2.8vw;
 	}
 
 	h2 > em {
 		color: var(--black);
 		font-size: inherit;
-		text-shadow: 1px 2px 3px rgba(10, 10, 10, 0.25);
+	}
+
+	h3 {
+		font-weight: 300;
+		--val: 1.3vw;
 	}
 </style>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Contact from '../../components/Contact.svelte';
-	import Nav from '../../components/NavDark.svelte';
+	import Nav from '../../components/Nav.svelte';
 	import Sidebar from '../../components/Sidebar.svelte';
 	import sidebar from '../../stores/sidebar';
 	import { page } from '$app/stores';
@@ -10,14 +10,13 @@
 	const handleMenuClick = () => {
 		sidebar.update((s) => !s);
 	};
-
-	$: showSidebar = $page.url.pathname.includes('/design/');
+	$: showSidebar = $page.path.includes('/design/');
 </script>
 
 <svelte:window bind:innerWidth={clientWidth} />
 
 <main class="design-layout-main">
-	<Nav class="top-nav" on:menu-click={handleMenuClick} />
+	<Nav class="top-nav" on:menu-click={handleMenuClick} iconColor="#FAF33E" />
 	<slot />
 	<Contact />
 	{#if showSidebar}
@@ -31,14 +30,15 @@
 	}
 
 	:global(.design-layout-main) {
-		display: grid;
-		grid-template-columns: 17% 1fr 17%;
-		grid-template-rows: min-content min-content 1fr;
 		transition: all ease-in-out 0.3s;
 		min-width: 96vw;
-		background-color: var(--brown);
+		background-color: var(--liberty);
 		min-height: 100vh;
 		padding-bottom: 2rem;
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+		position: relative;
 	}
 
 	@media (max-width: 1200px) {

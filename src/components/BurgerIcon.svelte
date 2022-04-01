@@ -1,19 +1,16 @@
 <svg
-	width="22"
-	height="16"
-	viewBox="0 0 22 16"
+	width="24"
+	height="18"
+	viewBox="0 0 24 18"
 	fill="none"
 	xmlns="http://www.w3.org/2000/svg"
 	on:click
 	class={$$props.class}
 >
-	<rect width="22" height="4" rx="2" fill="currentColor" />
-	<rect y="12" width="22" height="4" rx="2" fill="currentColor" />
-	<rect y="6" width="22" height="4" rx="2" fill="currentColor" />
+	<path
+		fill-rule="evenodd"
+		clip-rule="evenodd"
+		d="M0 2C0 0.89543 0.895431 0 2 0H22C23.1046 0 24 0.895431 24 2V2.5C24 3.60457 23.1046 4.5 22 4.5H2C0.89543 4.5 0 3.60457 0 2.5V2ZM0 15.5C0 14.3954 0.895431 13.5 2 13.5H22C23.1046 13.5 24 14.3954 24 15.5V16C24 17.1046 23.1046 18 22 18H2C0.89543 18 0 17.1046 0 16V15.5ZM2 6.75C0.895431 6.75 0 7.64543 0 8.75V9.25C0 10.3546 0.89543 11.25 2 11.25H22C23.1046 11.25 24 10.3546 24 9.25V8.75C24 7.64543 23.1046 6.75 22 6.75H2Z"
+		fill="#7D7ABC"
+	/>
 </svg>
-
-<style>
-	svg {
-		color: #bdc0c7;
-	}
-</style>

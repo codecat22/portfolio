@@ -36,7 +36,7 @@
 		.filter(onlyUnique);
 
 	let filter: FilterOptions = 'featured';
-	let selectedTags: string[] = ['university project'];
+	let selectedTags: string[] = [tags.sort()[0]];
 	$: videos =
 		filter === 'featured'
 			? allVideos.filter((video) => video.isFeatured)

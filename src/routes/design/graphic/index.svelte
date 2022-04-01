@@ -3,8 +3,6 @@
 	import Sidebar from '../../../components/Sidebar.svelte';
 </script>
 
-<h2 class="design-title">Graphic Design</h2>
-
 <section class="design-main cover-cards-container">
 	<a href="/design/graphic/logos" class="cover-card">
 		<img
@@ -62,7 +60,7 @@
 
 	.cover-card-arrow-container {
 		opacity: 0;
-		background: var(--purple);
+		background: var(--middle-blue);
 		margin-left: auto;
 		display: grid;
 		place-content: center;
@@ -75,7 +73,7 @@
 	}
 
 	.cover-card-caption-label {
-		font-family: 'Lalezar', cursive;
+		font-family: var(--font-header);
 		color: var(--white);
 		--val: 2vw;
 		flex: 8;
@@ -89,16 +87,15 @@
 		bottom: 15%;
 		left: 0;
 		display: flex;
-		background: var(--black);
+		background: var(--liberty);
 		min-width: 45%;
 		transition: min-width 0.3s linear;
 	}
 
 	.cover-card {
-		box-shadow: 4px 4px 4px 0px rgba(10, 10, 10, 0.5);
+		/* box-shadow: 4px 4px 4px 0px rgba(10, 10, 10, 0.5); */
 		position: relative;
 		height: min-content;
-		border-top: 5px solid var(--black);
 		display: flex;
 		cursor: pointer;
 	}
@@ -106,14 +103,18 @@
 	.cover-card-image {
 		max-width: 100%;
 		height: auto;
+		border-radius: 15%;
 	}
 
 	.cover-cards-container {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		height: 100%;
 		gap: 2rem;
-		padding: 4rem 0.5rem;
+		height: 100%;
+		flex: 1;
+		align-items: center;
+		padding-left: 4%;
+		padding-right: 4%;
 	}
 
 	@media (max-width: 1200px) {

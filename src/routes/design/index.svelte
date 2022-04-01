@@ -1,6 +1,4 @@
 <script lang="ts">
-	import ArrowRight from '../../components/ArrowRight.svelte';
-
 	const items = [
 		{
 			href: '/design/web',
@@ -37,62 +35,43 @@
 	];
 </script>
 
-<h2 class="design-title">Design</h2>
-
 <section class="design-main">
 	<ul>
 		{#each items as item}
 			<a href={item.href}>
+				<div class="img-container">
+					<img src={item.src} alt={item.alt} />
+				</div>
+				<hr />
 				<h3 class="doc-title">{item.title}</h3>
 				<p class="doc-abstract">{item.abstract}</p>
-				<img src={item.src} alt={item.alt} />
-				<div class="arrow-right">
-					<ArrowRight class="arrow-icon" />
-				</div>
 			</a>
 		{/each}
 	</ul>
 </section>
 
 <style>
-	a:hover {
-		background-color: var(--purple);
-		transition: all ease-in-out 0.2s;
-		transform: scale(1.05);
-		box-shadow: 0px 4px 4px 0px #00000040;
-		z-index: 100;
-		border: none;
+	hr {
+		background-color: white;
+		color: white;
+		width: 35%;
+		transition: width 0.2s ease-in-out;
 	}
 
-	.arrow-right {
-		width: 5vw;
-		min-width: 2rem;
-		display: grid;
-		place-content: center;
-		height: 5vw;
-		min-height: 2rem;
-		transition: all ease-in-out 0.3s;
-		margin-top: auto;
-		margin-left: auto;
-		padding: 0;
-	}
-
-	a:hover > .arrow-right {
-		background-color: #574b60;
-	}
-
-	a:hover > .arrow-right > :global(.arrow-icon) {
-		color: var(--white);
+	a:hover > hr {
+		width: 60%;
+		transition: width 0.2s ease-in-out;
 	}
 
 	.doc-abstract {
 		margin-left: 1rem;
 		margin-right: 1rem;
-		font-family: 'Open Sans', sans-serif;
 		margin-bottom: 1rem;
+		font-family: var(--font-main);
 		--val: 1vw;
 		--min: 0.6rem;
-		color: var(--light-gray);
+		color: white;
+		text-align: center;
 	}
 
 	img {
@@ -100,14 +79,28 @@
 		height: auto;
 		margin: auto;
 		padding: 1em;
+		transition: all 0.2s ease-in-out;
+	}
+	
+	a:hover > .img-container >img {
+		transition: all 0.2s ease-in-out;
+		transform: scale(1.2);
+	}
+
+	.img-container {
+		height: 60%;
+		display: grid;
+		place-content: center;
+		margin-bottom: 2rem;
 	}
 
 	.doc-title {
 		margin: 1rem;
-		font-family: 'Lalezar', cursive;
+		font-family: var(--font-header);
 		--val: 1.8vw;
 		transition: all ease-in-out 0.3s;
 		color: var(--white);
+		text-align: center;
 	}
 
 	ul {
@@ -150,17 +143,11 @@
 		padding: 0.3em 0 0 0.3em;
 		text-decoration: none;
 		color: var(--black);
-		border: 1px solid var(--black);
-		border-radius: 10px;
-	}
-
-	h2 {
-		text-align: center;
-		font-weight: 100;
-		--val: 2.2vw;
+		justify-content: center;
 	}
 
 	:global(.design-layout-main) {
 		grid-template-columns: 10% 1fr 10% !important;
+		background-color: var(--liberty);
 	}
 </style>

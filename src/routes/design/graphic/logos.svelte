@@ -49,7 +49,7 @@
 	}
 
 	.photo {
-		border: 1px solid rgba(189, 192, 199, 0.3);
+		/* border: 1px solid rgba(189, 192, 199, 0.3); */
 		max-width: 100%;
 		height: auto;
 	}

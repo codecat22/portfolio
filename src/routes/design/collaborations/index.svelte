@@ -77,6 +77,10 @@
 		height: 30ch;
 	}
 
+	.card.connected > .card-image {
+		object-fit: fill;
+	}
+
 	.card-main {
 		margin: max(1rem, 1.2vw);
 		margin-top: 0;

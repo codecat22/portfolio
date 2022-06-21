@@ -1,5 +1,12 @@
 export default [
 	{
+		name: 'PDwithBulgarianLGBTQ',
+		date: 'June 2022',
+		title: 'PD with the Bulgarian LGBTQ+ Community',
+		abstract:
+			"Master's thesis in Interactive Media Technology. Workshops and interviews exploring problems faced by LGBTQ+ Bulgarians and their desired solutions on a local level."
+	},
+	{
 		name: 'AestheticsOnline',
 		date: 'January 2021',
 		title: 'Big Mood',
@@ -40,6 +47,13 @@ export default [
 		title: 'Cloud Connected',
 		abstract:
 			'A workbook presenting the design concept for a productivity system centered around a smart desktop lamp called "The Cloud." The system utilizes various interactions to help create a more efficient, less stressful home workspace.'
+	},
+	{
+		name: 'SettingTheTone',
+		date: 'February 2022',
+		title: 'Setting the Tone',
+		abstract:
+			"A paper exploring the effects of camera angle in filmmaking on the viewers' emotional perception of the scene. Part of a course on research in design."
 	},
 	{
 		name: 'SustainabilitySeminarEssay',

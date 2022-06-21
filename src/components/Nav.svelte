@@ -13,8 +13,8 @@
 	export let isWriting = false;
 	export let iconColor = '#6DA34D';
 
-	$: isSubPage = $page.path.split('/').length >= 4;
-	$: hideMenuButton = !isWriting ? $page.path === '/design' : true;
+	$: isSubPage = $page.url.pathname.split('/').length >= 4;
+	$: hideMenuButton = !isWriting ? $page.url.pathname === '/design' : true;
 
 	const dispatch = createEventDispatcher();
 </script>
@@ -23,7 +23,7 @@
 	<a href="/"><HomeButton color={iconColor} /></a>
 	{#if !isWriting}<a href="/writing"><WritingButton color={iconColor} /></a>{/if}
 	{#if isWriting || !hideMenuButton}<a href="/design"><DesignButton color={iconColor} /></a>{/if}
-	<a href={$page.path.split('/').slice(0, -1).join('/')} class:hidden={!isSubPage}
+	<a href={$page.url.pathname.split('/').slice(0, -1).join('/')} class:hidden={!isSubPage}
 		><ReturnArrow class="return-arrow" /></a
 	>
 	<div class="right-item grd">

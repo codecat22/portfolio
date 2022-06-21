@@ -7,7 +7,7 @@
 	<a href="/design/art/photos" class="cover-card">
 		<img
 			class="cover-card-image"
-			src="/images/art/covers/photo-cover.PNG"
+			src="/images/art/covers/photo-cover.png"
 			alt="building through a rainy window"
 		/>
 		<div class="cover-card-caption">
@@ -20,7 +20,7 @@
 	<a href="/design/art/video" class="cover-card">
 		<img
 			class="cover-card-image"
-			src="/images/art/covers/video-cover.PNG"
+			src="/images/art/covers/video-cover.png"
 			alt="sad person pretending to be cooking"
 		/>
 		<div class="cover-card-caption">
@@ -33,7 +33,7 @@
 	<a href="/design/art/art-gallery" class="cover-card">
 		<img
 			class="cover-card-image flip-image"
-			src="/images/art/covers/art-cover.PNG"
+			src="/images/art/covers/art-cover.png"
 			alt="drawn black and white bridge"
 		/>
 		<div class="cover-card-caption">

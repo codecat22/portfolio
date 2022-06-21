@@ -1,0 +1,21 @@
+import{S as Q,i as U,s as W,e as n,t as h,k as S,c as i,a as l,h as p,d as a,m as j,b as t,a0 as Z,g as F,H as e,E as V}from"../../../chunks/index-2875f834.js";import{c as ee}from"../../../chunks/collaborations-7c6292cf.js";function te(f){let o,E,b,s,u,g,X,P,_,A,T,c,x,H,M,I,q,C,d,G,m,N,R,v,$,z;return{c(){o=n("h2"),E=h(f[3]),b=S(),s=n("section"),u=n("aside"),g=n("img"),P=S(),_=n("p"),A=h(f[1]),T=S(),c=n("div"),x=n("p"),H=h(`In this project we used Soma Design to create an elevator prototype for the Interaction Design\r
+			as a Reflective Practice course, based on a brief provided by ManyOne. Soma Design practices\r
+			focus on subjective bodily experiences and movements and the feelings and meaning they evoke\r
+			or create; in our project, we focused on the somatic experience in the feet.`),M=S(),I=n("p"),q=h(`The elevator design introduces two somatic interactions: first, a malleable floor which swells\r
+			and sinks in the direction of the force as the elevator travels up/ down, making the user\r
+			think about their balance; second, a shapeshifting material which responds to the pressure of\r
+			feet onto it and becomes coarser or softer depending on how heavily one steps. Our aim was to\r
+			make the experience of riding an elevator more interesting and create some less-than-expected\r
+			somatic experiences for the users.`),C=S(),d=n("p"),G=h(`A documentation of the process that led us to our final design and a detailed description of\r
+			the prototype can be found in the `),m=n("a"),N=h("report"),R=h(`. The project also included a\r
+			`),v=n("a"),$=h("video"),z=h("."),this.h()},l(r){o=i(r,"H2",{class:!0});var w=l(o);E=p(w,f[3]),w.forEach(a),b=j(r),s=i(r,"SECTION",{class:!0});var D=l(s);u=i(D,"ASIDE",{class:!0});var O=l(u);g=i(O,"IMG",{class:!0,src:!0,alt:!0}),P=j(O),_=i(O,"P",{class:!0});var Y=l(_);A=p(Y,f[1]),Y.forEach(a),O.forEach(a),T=j(D),c=i(D,"DIV",{class:!0});var y=l(c);x=i(y,"P",{});var B=l(x);H=p(B,`In this project we used Soma Design to create an elevator prototype for the Interaction Design\r
+			as a Reflective Practice course, based on a brief provided by ManyOne. Soma Design practices\r
+			focus on subjective bodily experiences and movements and the feelings and meaning they evoke\r
+			or create; in our project, we focused on the somatic experience in the feet.`),B.forEach(a),M=j(y),I=i(y,"P",{});var J=l(I);q=p(J,`The elevator design introduces two somatic interactions: first, a malleable floor which swells\r
+			and sinks in the direction of the force as the elevator travels up/ down, making the user\r
+			think about their balance; second, a shapeshifting material which responds to the pressure of\r
+			feet onto it and becomes coarser or softer depending on how heavily one steps. Our aim was to\r
+			make the experience of riding an elevator more interesting and create some less-than-expected\r
+			somatic experiences for the users.`),J.forEach(a),C=j(y),d=i(y,"P",{});var k=l(d);G=p(k,`A documentation of the process that led us to our final design and a detailed description of\r
+			the prototype can be found in the `),m=i(k,"A",{target:!0,href:!0,class:!0});var K=l(m);N=p(K,"report"),K.forEach(a),R=p(k,`. The project also included a\r
+			`),v=i(k,"A",{target:!0,href:!0,class:!0});var L=l(v);$=p(L,"video"),L.forEach(a),z=p(k,"."),k.forEach(a),y.forEach(a),D.forEach(a),this.h()},h(){t(o,"class","design-title"),t(g,"class","collaboration-image"),Z(g.src,X="/images/collaborations/"+f[0])||t(g,"src",X),t(g,"alt",f[2]),t(_,"class","collaboration-authors"),t(u,"class","collaboration-aside"),t(m,"target","blank"),t(m,"href","/data/papers/StandingOnYourFeet.pdf"),t(m,"class","collaboration-file-link"),t(v,"target","blank"),t(v,"href","https://www.youtube.com/watch?v=pHONGiIztX4"),t(v,"class","collaboration-file-link"),t(c,"class","collaboration-description"),t(s,"class","design-main collaboration-content")},m(r,w){F(r,o,w),e(o,E),F(r,b,w),F(r,s,w),e(s,u),e(u,g),e(u,P),e(u,_),e(_,A),e(s,T),e(s,c),e(c,x),e(x,H),e(c,M),e(c,I),e(I,q),e(c,C),e(c,d),e(d,G),e(d,m),e(m,N),e(d,R),e(d,v),e(v,$),e(d,z)},p:V,i:V,o:V,d(r){r&&a(o),r&&a(b),r&&a(s)}}}function ae(f){const{img:o,authors:E,alt:b,title:s}=ee.elevator;return[o,E,b,s]}class re extends Q{constructor(o){super(),U(this,o,ae,te,W,{})}}export{re as default};

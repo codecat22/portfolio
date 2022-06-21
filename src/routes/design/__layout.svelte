@@ -10,7 +10,7 @@
 	const handleMenuClick = () => {
 		sidebar.update((s) => !s);
 	};
-	$: showSidebar = $page.path.includes('/design/');
+	$: showSidebar = $page.url.pathname.includes('/design/');
 </script>
 
 <svelte:window bind:innerWidth={clientWidth} />

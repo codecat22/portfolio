@@ -13,7 +13,7 @@
 	];
 
 	let isMobile = false;
-	$: current = $page.path;
+	$: current = $page.url.pathname;
 </script>
 
 <nav use:clickOutside on:click-outside={() => sidebarIsOpen.set(false)} class:open={$sidebarIsOpen}>

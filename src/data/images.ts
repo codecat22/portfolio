@@ -1,11 +1,18 @@
 export default {
 	logos: [
-		'/images/graphic-design/logos/featured/1, concept, circular, colour.png',
-		'/images/graphic-design/logos/featured/1, concept, square, colour.png',
-		'/images/graphic-design/logos/featured/2, concept, circular, black-and-white.png',
-		'/images/graphic-design/logos/featured/2, concept, circular, colour.png'
+		'/images/graphic-design/logos/featured/1, circular, colour, version.png',
+		'/images/graphic-design/logos/featured/1, colour, version, circular.png',
+		'/images/graphic-design/logos/featured/1, version, circular, black-and-white.png',
+		'/images/graphic-design/logos/featured/2, concept, circular, colour.png',
+		'/images/graphic-design/logos/featured/2, concept, square, colour.png',
+		'/images/graphic-design/logos/featured/3, concept, circular, black-and-white.png',
+		'/images/graphic-design/logos/featured/3, concept, circular, colour.png'
 	],
-	icons: ['/images/graphic-design/icons/featured/1, colour, menu, rounded.png'],
+	icons: [
+		'/images/graphic-design/icons/featured/1, colour, menu, rounded.png',
+		'/images/graphic-design/icons/featured/2, colour, menu.png',
+		'/images/graphic-design/icons/featured/2, menu.png'
+	],
 	photos: [
 		'/images/art/photos/featured/1, animals, summer, sea, water.jpg',
 		'/images/art/photos/featured/1, landscape, sea, water.jpg',

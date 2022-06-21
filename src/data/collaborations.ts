@@ -18,10 +18,18 @@ export default {
 	yunak: {
 		img: 'yunak.PNG',
 		alt: 'Yunak game logo featuring a dragon',
-		authors: 'Xuehua Fu | Siyana Ivanova | Tomass Wilson | Roni Kaufman | Ryan Yared',
+		authors: 'Xuehua Fu | Siyana Ivanova | Roni Kaufman | Tomass Wilson | Ryan Yared',
 		title: 'Yunak Game',
 		description:
 			'Yunak is a 2D puzzle game demo based on Bulgarian folk tales, created for the Computer Game Design course. The demo consists of snakes-and-ladders style puzzles and multipath dialogue scenes, introducing the player to various folklore creatures and leading to one of three possible endings.'
+	},
+	dragons: {
+		img: 'dragons.png',
+		alt: 'an AR rendering of a cute dragon',
+		authors: 'Siyana Ivanova | Filip Ek Johansson | Carl Kernell',
+		title: 'Here Be Dragons',
+		description:
+			'Here Be Dragons is a simple tamagotchi-like AR mobile game.'
 	},
 	elevator: {
 		img: 'elevator.PNG',
@@ -54,5 +62,14 @@ export default {
 		title: 'Precipitation Data Processing and Visualisation Web System',
 		description:
 			'My Bachelor’s thesis, in collaboration with Marin Karamihalev and under the supervision of dr inż. Rafał Jóźwiak, focuses on an automatic web system for downloading, processing, and visualizing precipitation data obtained via NASA’s Global Precipitation Measurement Mission. The system was developed for use by the Warsaw-based firm Satagro, which provides farmers with data useful in determining crop maintenance needs and predicting crop yields.'
-	}
+	},
+	connected: {
+		img: 'connected.png',
+		alt: 'a rendering of several tools',
+		authors: 'Filip Berendt | Oliver Eriksson | Samuel Westman Granlund | Tobias Hansson | Siyana Ivanova | Anders Steen',
+		title: 'Connected',
+		description:
+			'Connected is a VR environment meant to help schoolchildren learn about electricity and circuitry.'
+	},
+	
 };

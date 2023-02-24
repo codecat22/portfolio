@@ -18,7 +18,7 @@
 
 <style>
 	.card-title {
-		font-family: var(--font-header) !important;
+		font-family: var(--font-main) !important;
 		opacity: 0;
 		text-align: center;
 		transition: all 0.2s ease-in-out;
@@ -41,11 +41,13 @@
 		display: grid;
 		place-content: center;
 		padding: 1em;
+		border-radius: 7%;
 	}
 	
 	.image-overlay:hover {
-		background-color: rgb(35, 240, 199, 0.85);
+		background-color: rgba(var(--cool-grey-rgb), 0.85);
 		transition: all 0.4s ease-in-out;
+		border-radius: 7%;
 	}
 
 	section {
@@ -73,6 +75,7 @@
 		object-fit: cover;
 		width: 100%;
 		height: 30ch;
+		border-radius: 7%;
 	}
 
 	.card-main {

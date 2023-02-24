@@ -1,30 +1,15 @@
 <script lang="ts">
 	import FilterBar from '../../../components/FilterBar.svelte';
-	import { makeTagsFromUrls } from '../../../utils/index';
+	import { makeTagsFromUrls, getNamesFromUrls } from '../../../utils/index';
 	import images from '../../../data/images';
 	import clickOutside from '../../../actions/clickOutside';
-
-	const names = [
-		'Poster',
-		'Goat power',
-		'Geometry',
-		'Bridge at night',
-		'Rila',
-		'Raleigh',
-		'Teatime',
-		'Sofia night',
-		'The eyeball zone',
-		'Identity',
-		'Spring in Sofia',
-		'Country house',
-		'Alexander Nevsky'
-	];
 
 	const getNum = (url: string): number => parseInt(url.split('/').pop().split(',')[0].trim());
 	let selectedImage = '';
 
 	const allGalleryUrls = images['art-gallery'];
 	const tags = makeTagsFromUrls(allGalleryUrls);
+	const names = getNamesFromUrls(allGalleryUrls);
 
 	let filter: FilterOptions = 'featured';
 	let selectedTags: string[] = [tags.sort()[0]];
@@ -47,7 +32,7 @@
 		{#each galleryUrls as href, i}
 			<div class="art-card card-{getNum(href)}" on:click={() => (selectedImage = href)}>
 				<img class="art" src={href} loading="lazy" alt={extractNameFromUrl(href)} />
-				<p class="art-description">{names[i] || 'A pretty'}</p>
+				<p class="art-description">{names?.[i] || '[Unnamed]'}</p>
 			</div>
 		{/each}
 	</div>

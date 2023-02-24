@@ -16,7 +16,7 @@
 <svelte:window bind:innerWidth={clientWidth} />
 
 <main class="design-layout-main">
-	<Nav class="top-nav" on:menu-click={handleMenuClick} iconColor="#FAF33E" />
+	<Nav class="top-nav" on:menu-click={handleMenuClick} iconColor="#2B2D42" />
 	<slot />
 	<Contact />
 	{#if showSidebar}
@@ -32,7 +32,7 @@
 	:global(.design-layout-main) {
 		transition: all ease-in-out 0.3s;
 		min-width: 96vw;
-		background-color: var(--liberty);
+		background-color: var(--anti-flash-white);
 		min-height: 100vh;
 		padding-bottom: 2rem;
 		overflow-x: hidden;

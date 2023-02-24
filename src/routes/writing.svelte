@@ -12,8 +12,8 @@
 <svelte:window bind:innerWidth={clientWidth} />
 
 <main>
-	<Nav isWriting />
-	<h2>Academic Papers & Articles</h2>
+	<Nav isWriting iconColor="#2B2D42" />
+	<h2>Writings</h2>
 	<ul>
 		{#each docs as { date, title, abstract, name }}
 			<a href="/data/papers/{name}.pdf" target="blank">
@@ -29,17 +29,16 @@
 
 <style>
 	a:hover {
-		background-color: var(--white);
 		transition: all ease-in-out 0.3s;
 		transform: scale(1.2);
-		box-shadow: 0px 2px 4px 0px #00000040;
 		z-index: 100;
 	}
 
 	.doc-abstract {
 		margin-left: 1rem;
 		margin-right: 1rem;
-		font-family: var(--font-main-alt);
+		font-family: var(--font-main);
+		line-height: 26px;
 		height: 43%;
 		--val: 1vw;
 		--min: 0.6rem;
@@ -47,21 +46,22 @@
 
 	.doc-title {
 		margin: 1rem;
-		font-family: var(--font-header-alt);
+		font-family: var(--font-main);
 		--val: 1.5vw;
 		transition: all ease-in-out 0.3s;
+		line-height: 34px;
 	}
 
 	a:hover > .doc-title {
-		color: var(--paradise);
+		color: var(--fire-engine-red);
 		transition: all ease-in-out 0.3s;
 	}
 
 	.doc-date {
-		color: var(--light-gray);
+		color: var(--cool-grey);
 		--val: 0.8vw;
 		--min: 0.5rem;
-		font-family: var(--font-main-alt);
+		font-family: 'Satisfy';
 	}
 
 	ul {
@@ -116,7 +116,8 @@
 		text-align: center;
 		font-weight: 100;
 		--val: 2.2vw;
-		font-family: var(--font-header-alt);
+		font-family: var(--font-main);
+		line-height: 30px;
 		color: black;
 	}
 </style>

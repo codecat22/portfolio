@@ -69,13 +69,13 @@
 		font-family: var(--font-main);
 		font-size: 1em;
 		background: transparent;
-		color: white;
+		color: var(--space-cadet);
 		border: none;
 		cursor: pointer;
 	}
 
 	.tag.selected {
-		color: var(--sea-green);
+		color: var(--fire-engine-red);
 	}
 
 	.filters-bar {
@@ -109,7 +109,7 @@
 	}
 
 	.filter.selected-filter::after {
-		background-color: white;
+		background-color: var(--space-cadet);
 		transform: scaleX(1);
 	}
 
@@ -130,8 +130,8 @@
 	}
 
 	.filter-label {
-		color: white;
-		font-family: var(--font-header);
+		color: var(--space-cadet);
+		font-family: var(--font-main);
 		font-size: 1em;
 	}
 </style>

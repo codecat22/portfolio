@@ -62,17 +62,22 @@
 
 	:global(.web-design-description > p) {
 		font-family: var(--font-main);
-		color: var(--white);
+		color: var(--black);
 		margin-bottom: 1em;
+		line-height: 1.4em;
 	}
 
-	:global(.web-design-description > p:first-child) {
+	:global(.web-design-description > p) {
 		font-size: 1.5vw;
 	}
 
-	:global(.web-design-description > p:not(:first-child)) {
+	/* :global(.web-design-description > p:first-child) {
+		font-size: 1.5vw;
+	} */
+
+	/* :global(.web-design-description > p:not(:first-child)) {
 		font-size: 1vw;
-	}
+	} */
 
 	:global(.web-design-authors) {
 		font-family: var(--font-header) !important;

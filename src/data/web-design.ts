@@ -1,5 +1,17 @@
 export default [
 	{
+		title: 'MetaSolutions',
+		href: '/design/web/metasolutions',
+		img: '/images/web-design/protecto.png',
+		alt: 'MetaSolutions screenshot',
+		pageImages: [
+			{ img: '/images/web-design/protecto.png', alt: 'Protecto screenshot' },
+			{ img: '/images/web-design/protecto-2.png', alt: 'Protecto user settings screenshot' }
+		],
+		subtitle: 'September 2022 - Present',
+		description: 'Placeholder'
+	},
+	{
 		title: 'Protecto',
 		href: '/design/web/protecto',
 		img: '/images/web-design/protecto.png',
@@ -70,16 +82,4 @@ export default [
 		subtitle: 'June 2019 - December 2019',
 		description: `A catalogue website showing off the products offered by Trebel16 (a company which sells window frames, joinery, doors, facings, and other similar items) and providing contact and booking information to the customer. `
 	},
-	{
-		title: 'Grocery app',
-		href: '/design/web/grocery',
-		img: '/images/web-design/grocery-app.png',
-		alt: 'screenshot of example lists',
-		pageImages: [
-			{ img: '/images/web-design/grocery-app.png', alt: 'screenshot of example lists' },
-			{ img: '/images/web-design/grocery-app-2.png', alt: 'screenshot of additional pages' }
-		],
-		subtitle: 'In development',
-		description: `A simple utility app that allows the user to create and upkeep a multitude of custom lists.`
-	}
 ];

@@ -88,7 +88,7 @@
 	}
 
 	.menu {
-		color: var(--light-gray);
+		color: var(--space-cadet);
 		text-decoration: none;
 		align-self: center;
 		margin-right: 0px;

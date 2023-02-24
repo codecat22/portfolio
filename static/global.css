@@ -138,8 +138,8 @@ table {
     --brown: rgba(54, 47, 55, 1);
     --yellow:  rgba(255, 252, 232, 1);
     --green: #697A21;
-    --white: rgba(255, 250, 255, 1);
-    --black: rgba(10, 10, 10, 1);
+    --white: rgba(255, 255, 255, 1);
+    --black: rgba(0, 0, 0, 1);
     --gray: #7D8491;
     --purple: #3F334D;
     --pink: #DB5461;
@@ -150,15 +150,21 @@ table {
     --lemon-yellow: #FAF33E;
     --misty-rose: #FDE8E9;
     --bud-green: #6DA34D;
-    --paradise: #EE4266;
+    --fire-engine-red: #D90429;
+    --fire-engine-red-rgb: 217, 4, 41;
     --ultra-red: #F76F8E;
     --light-gray: #B2AFA9;
     --violet: #23022E;
+    --space-cadet: #2B2D42;
+    --anti-flash-white: #EDF2F4;
+    --red-pantone: #EF233C;
+    --cool-grey: #8D99AE;
+    --cool-grey-rgb: 141, 153, 174;
 
     --mobile-width: 768px;
 
     --font-header: 'Roboto Condensed', Sans-Serif;
-    --font-main: 'Cabin', Sans-Serif;
+    --font-main: 'Oswald', Sans-Serif;
 
     --font-header-alt: 'Merriweather', Serif;
     --font-main-alt: 'Muli', Sans-Serif;
@@ -220,14 +226,14 @@ p {
 .design-title {
     text-align: center;
     font-weight: 100;
-    --val: 2.2vw;
-    color: var(--white);
+    --val: 2.6vw;
+    color: var(--black);
     text-align: center;
     grid-row: 2;
     grid-column: 2;
     transition: all ease-in-out 0.3s;
     margin-bottom: 1.5em;
-    font-family: var(--font-header) !important;
+    font-family: 'Satisfy' !important;
 }
 
 .design-main {
@@ -245,9 +251,9 @@ main {
 }
 
 .font-header {
-    font-family: 'Roboto Condensed', Sans-Serif;
+    font-family: var(--font-header);
 }
 
 .font-main {
-    font-family: 'Cabin', Sans-Serif;
+    font-family: var(--font-main);
 }

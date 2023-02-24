@@ -3,15 +3,11 @@
 	import { makeTagsFromUrls } from '../../../utils/index';
 	import images from '../../../data/images';
 
-	// const photosImport = import.meta.glob(
-	// 	'images/graphic-design/logos/**/*.{jpg,JPG,png,PNG}'
-	// );
-
 	const allPhotoUrls = images.logos;
 	const tags = makeTagsFromUrls(allPhotoUrls);
 
 	let filter: FilterOptions = 'featured';
-	let selectedTags: string[] = ['concept'];
+	let selectedTags: string[] = ['black-and-white'];
 	$: photoUrls =
 		filter === 'featured'
 			? allPhotoUrls.filter((url) => url.includes(`/featured/`))

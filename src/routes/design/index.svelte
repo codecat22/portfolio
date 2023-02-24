@@ -52,8 +52,8 @@
 
 <style>
 	hr {
-		background-color: white;
-		color: white;
+		background-color: var(--space-cadet);
+		color: var(--space-cadet);
 		width: 35%;
 		transition: width 0.2s ease-in-out;
 	}
@@ -70,7 +70,7 @@
 		font-family: var(--font-main);
 		--val: 1vw;
 		--min: 0.6rem;
-		color: white;
+		color: var(--space-cadet);
 		text-align: center;
 	}
 
@@ -96,10 +96,10 @@
 
 	.doc-title {
 		margin: 1rem;
-		font-family: var(--font-header);
+		font-family: 'Satisfy';
 		--val: 1.8vw;
 		transition: all ease-in-out 0.3s;
-		color: var(--white);
+		color: var(--fire-engine-red);
 		text-align: center;
 	}
 
@@ -148,6 +148,6 @@
 
 	:global(.design-layout-main) {
 		grid-template-columns: 10% 1fr 10% !important;
-		background-color: var(--liberty);
+		background-color: var(--anti-flash-white);
 	}
 </style>

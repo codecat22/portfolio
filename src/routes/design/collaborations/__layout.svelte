@@ -14,13 +14,13 @@
 
 	:global(.collaboration-file-link) {
 		font-family: var(--font-main) !important;
-		text-decoration: underline;
-		color: var(--white);
+		text-decoration: none;
+		color: var(--fire-engine-red);
 		font-size: inherit;
 	}
 
 	:global(.collaboration-file-link:visited) {
-		color: var(--light-gray);
+		color: var(--fire-engine-red);
 	}
 
 	:global(.collaboration-content) {
@@ -67,24 +67,25 @@
 
 	:global(.collaboration-description > p) {
 		font-family: var(--font-main);
-		color: var(--white);
+		color: var(--black);
 		margin-bottom: 1em;
+		font-size: 1.5vw;
+		line-height: 1.4em;
 	}
-
+/* 
 	:global(.collaboration-description > p:first-child) {
 		font-size: 1.5vw;
 	}
 
 	:global(.collaboration-description > p:not(:first-child)) {
 		font-size: 1vw;
-	}
+	} */
 
 	:global(.collaboration-authors) {
-		font-family: var(--font-header) !important;
+		font-family: var(--font-main) !important;
 		font-weight: 300;
-		color: white;
-		--val: 0.34w;
-		--min: 0.7em;
+		color: var(--black);
+		font-size: 1.1em;
 		margin-top: 1em;
 	}
 </style>

@@ -13,6 +13,10 @@ export default {
 		'/images/graphic-design/icons/featured/2, colour, menu.png',
 		'/images/graphic-design/icons/featured/2, menu.png'
 	],
+	other: [
+		'/images/graphic-design/other/featured/1, wallpaper, floral, mobile.png',
+		'/images/graphic-design/other/featured/2, wallpaper, mobile.png',
+	],
 	photos: [
 		'/images/art/photos/featured/1, animals, summer, sea, water.jpg',
 		'/images/art/photos/featured/1, landscape, sea, water.jpg',
@@ -98,18 +102,18 @@ export default {
 		'/images/art/photos/other/village, summer, mountain.jpg'
 	],
 	'art-gallery': [
-		'/images/art/gallery/featured/1, colour, poster, digital.png',
-		'/images/art/gallery/featured/1, fantasy, colour, poster, digital.png',
-		'/images/art/gallery/featured/1, poster, abstract, colour, digital.png',
-		'/images/art/gallery/featured/2, black-and-white, landscape.jpg',
-		'/images/art/gallery/featured/2, landscape, black-and-white.jpg',
-		'/images/art/gallery/featured/3, black-and-white, pencil, portrait.jpg',
-		'/images/art/gallery/featured/4, colour, abstract.jpg',
-		'/images/art/gallery/featured/5, colour, abstract.jpg',
-		'/images/art/gallery/featured/6, colour, abstract.jpg',
-		'/images/art/gallery/featured/7, colour, abstract, portrait.jpg',
-		'/images/art/gallery/featured/8, colour, abstract, cityscape.jpg',
-		'/images/art/gallery/featured/9, colour, abstract.jpg',
-		'/images/art/gallery/featured/10, colour, abstract, cityscape.jpg'
+		'/images/art/gallery/featured/[Poster] 1, colour, poster, digital.png',
+		'/images/art/gallery/featured/[Goat power] 1, fantasy, colour, poster, digital.png',
+		'/images/art/gallery/featured/[Bridge at night] 2, black-and-white, landscape.jpg',
+		'/images/art/gallery/featured/[Teatime] 4, colour, abstract.jpg',
+		'/images/art/gallery/featured/[Sofia night] 5, colour, abstract.jpg',
+		'/images/art/gallery/featured/[The eyeball zone] 6, colour, abstract.jpg',
+		'/images/art/gallery/featured/[Spring in Sofia] 8, colour, abstract, cityscape.jpg',
+		'/images/art/gallery/[Geometry] 1, poster, abstract, colour, digital.png',
+		'/images/art/gallery/[Rila] 2, landscape, black-and-white.jpg',
+		'/images/art/gallery/[Raleigh] 3, black-and-white, pencil, portrait.jpg',
+		'/images/art/gallery/[Identity] 7, colour, abstract, portrait.jpg',
+		'/images/art/gallery/[Country house] 9, colour, abstract.jpg',
+		'/images/art/gallery/[Alexander Nevsky] 10, colour, abstract, cityscape.jpg'
 	]
 };

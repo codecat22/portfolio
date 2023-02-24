@@ -31,7 +31,7 @@
 	.close-btn {
 		margin-left: auto;
 		color: white;
-		background-color: var(--violet);
+		background-color: var(--space-cadet);
 		border: none;
 		font-size: xx-large;
 		cursor: pointer;
@@ -60,7 +60,7 @@
 		z-index: 1000;
 		top: 0;
 		right: -250px;
-		background-color: var(--violet);
+		background-color: var(--space-cadet);
 		overflow-x: hidden;
 		padding: 1rem;
 		transition: all ease-in-out 0.4s;
@@ -80,11 +80,11 @@
 		text-decoration: none;
 		cursor: pointer;
 		padding-bottom: 1rem;
-		font-family: var(--font-header);
+		font-family: var(--font-main);
 		color: white;
 	}
 
 	a:hover {
-		color: var(--lemon-yellow);
+		color: var(--fire-engine-red);
 	}
 </style>

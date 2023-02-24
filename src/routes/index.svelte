@@ -11,7 +11,7 @@
 		</a>
 	</aside>
 	<aside>
-		<h3 class="name-title font-main">inz. Siyana Ivanova</h3>
+		<h3 class="name-title font-main">Siyana M. Ivanova</h3>
 		<a href="/writing" class="writing-link">
 			<h1 class="writing-header font-header">Writing</h1>
 		</a>
@@ -24,21 +24,24 @@
 <style>
 	button {
 		text-decoration: none;
-		color: var(--white);
+		color: var(--black);
 		position: absolute;
 		transform: translate(-50%, -50%);
 		left: 50%;
-		bottom: -2%;
-		background-color: var(--bud-green);
+		bottom: 1%;
+		background-color: var(--anti-flash-white);
 		box-shadow: 0px 2px 3px 0px #0a0a0a80;
 		border-radius: 25px;
 		border: none;
-		--min: 1.2em;
-		--val: 1.9vw;
+		--min: 0.8em;
+		--val: 1.5vw;
 		--max: 3em;
 		cursor: pointer;
 		font-weight: 300;
+		/* padding: 0.5em; */
 		padding: 0.5em;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 
 	button:hover {
@@ -54,7 +57,8 @@
 
 	aside {
 		width: 50.2%;
-		background-color: var(--liberty);
+		/* background-color: var(--liberty); */
+		background-color: var(--space-cadet);
 		position: relative;
 		display: flex;
 		flex-direction: column;
@@ -73,6 +77,7 @@
 		left: 33%;
 		top: 20%;
 		transform: translate(-50%, -50%);
+		font-family: 'Satisfy', cursive;
 	}
 
 	.writing-link {
@@ -97,6 +102,7 @@
 		left: 63%;
 		top: 80%;
 		transform: translate(-50%, -50%);
+		font-family: 'Satisfy', cursive;
 	}
 
 	.portfolio-title {
@@ -117,7 +123,7 @@
 		color: var(--white);
 		position: absolute;
 		top: 50%;
-		left: 50%;
+		left: 50.4%;
 		transform: translate(-50%, -50%);
 		pointer-events: none;
 		width: 25ch;

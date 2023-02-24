@@ -33,7 +33,7 @@
 	<a href="/design/graphic/others" class="cover-card">
 		<img
 			class="cover-card-image"
-			src="/images/comingsoon-alt.png"
+			src="/images/graphic-design/wallpaper.png"
 			alt="drawn black and white bridge"
 		/>
 		<div class="cover-card-caption">
@@ -60,7 +60,7 @@
 
 	.cover-card-arrow-container {
 		opacity: 0;
-		background: var(--middle-blue);
+		background-color: var(--fire-engine-red);
 		margin-left: auto;
 		display: grid;
 		place-content: center;
@@ -73,11 +73,12 @@
 	}
 
 	.cover-card-caption-label {
-		font-family: var(--font-header);
-		color: var(--white);
+		font-family: 'Satisfy';
+		color: var(--space-cadet);
 		--val: 2vw;
 		flex: 8;
 		margin: 0.5rem;
+		margin-left: 1em;
 		font-weight: 400;
 		display: flex;
 	}
@@ -87,17 +88,17 @@
 		bottom: 15%;
 		left: 0;
 		display: flex;
-		background: var(--liberty);
+		background: var(--anti-flash-white);
 		min-width: 45%;
 		transition: min-width 0.3s linear;
 	}
 
 	.cover-card {
-		/* box-shadow: 4px 4px 4px 0px rgba(10, 10, 10, 0.5); */
 		position: relative;
 		height: min-content;
 		display: flex;
 		cursor: pointer;
+		max-width: 500px;
 	}
 
 	.cover-card-image {

@@ -18,7 +18,10 @@
 		rel="stylesheet"
 	/>
 	<link href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300" rel="stylesheet" />
-
+	<link
+		href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Satisfy&display=swap"
+		rel="stylesheet"
+	/>
 	<link rel="stylesheet" href="/global.css" />
 	<title>Portfolio - Siyana Ivanova</title>
 </svelte:head>

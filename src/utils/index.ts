@@ -9,6 +9,7 @@ export const makeTagsFromUrls = (urls: string[]): string[] => [
 		urls
 			.map((it) =>
 				it
+					.replace(/\[.*\] /, '')
 					.split('/')
 					.pop()
 					.split('.')[0]
@@ -20,4 +21,16 @@ export const makeTagsFromUrls = (urls: string[]): string[] => [
 	)
 ];
 
-export const checkPlaceholder = (p: string): string => p === "[placeholder]" ? "/images/placeholder-cat.jpg" : p
+export const getNamesFromUrls = (urls: string[]): string[] => [
+	...new Set(
+		urls
+			.map((it) => {
+				const split = it.split(/[[\]]/);
+				return split.length === 3 ? split[1] : '[Unnamed]';
+			})
+			.flat(1)
+	)
+];
+
+export const checkPlaceholder = (p: string): string =>
+	p === '[placeholder]' ? '/images/placeholder-cat.jpg' : p;
